@@ -58,7 +58,7 @@ const EmiCalculatorModal = ({
               setData(response?.data?.data);
             }
             else {
-              message.error(response?.data?.msg)
+              //message.error(response?.data?.msg)
               setContentTrue(true);
             }
           })

@@ -575,7 +575,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
     //     // Handle the case where kycId is undefined
     //     setLoading(false);
     //     dispatch(setLoader(false));
-    //     message.error("AADHAAR number is undefined");
+    //     //message.error("AADHAAR number is undefined");
     //     return;
     // }
 
@@ -612,43 +612,11 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
         console.log(res, "res");
         setLoading(false);
         dispatch(setLoader(false));
-        if (res === undefined || res === null || res === "") {
-          return;
-        }
-        if (res.status === 200 || res.status === 201) {
-          try {
-            if (res?.data?.resCode === -1) {
-              let _loginData = [];
-              console.log("resp kyc", res.data.data.resp.result);
-              setRequestId(res?.data?.data?.resp?.requestId);
-              if (shareLinks === "Verify Aadhar Card") {
-                setOpenOtpModal(true);
-                // setVerifiedText("VERIFIED")
-                // startResendTimer(); // Start the timer after OTP is sent successfully
-              } else {
-                setOpenOtpModal(false);
-                setKycLinks(false);
-                setVerifiedTextKYC("VERIFIED");
-                message.success(res.data.data.statusMsg);
-              }
-            } else if (res.data.errCode === 10609) {
-              // Handle error code 10609
-            } else {
-              // dispatch(setUser(res.data));
-              // navigate('/Dashboard')
-            }
-          } catch (err) {
-            console.log(err);
-          }
-        }
+      
       })
       .catch((error) => {
         setLoading(false);
         dispatch(setLoader(false));
-        if (error?.response?.status === 400) {
-          if (error?.response?.data?.resCode === 8)
-            message.error("Please Enter Correct OTP");
-        }
       });
   };
 
@@ -661,7 +629,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
     //     // Handle the case where kycId is undefined
     //     setLoading(false);
     //     dispatch(setLoader(false));
-    //     message.error("AADHAAR number is undefined");
+    //     //message.error("AADHAAR number is undefined");
     //     return;
     // }
 
@@ -731,10 +699,6 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
       .catch((error) => {
         setLoading(false);
         dispatch(setLoader(false));
-        if (error?.response?.status === 400) {
-          if (error?.response?.data?.resCode === 8)
-            message.error("Please Enter Correct OTP");
-        }
       });
   };
 
@@ -780,7 +744,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
               setPanLinks(false);
             } else if (res?.data?.data?.statusCode === "102") {
               // Handle error code 10609
-              message.error(res.data.data.statusMsg);
+              //message.error(res.data.data.statusMsg);
             }
           } catch (err) {
             console.log(err);
@@ -790,10 +754,6 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
       .catch((error) => {
         setLoading(false);
         dispatch(setLoader(false));
-        if (error?.response?.status === 400) {
-          if (error?.response?.data?.resCode === 8)
-            message.error("Please Enter Correct OTP");
-        }
       });
   };
 
@@ -829,7 +789,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
         if (res.status === 200 || res.status === 201) {
           //setLoading(false)
           // if (!res.ok) {
-          //     message.error('Please check your internet connections');
+          //     //message.error('Please check your internet connections');
           // } else {
           try {
             if (res.data.resCode === -1) {
@@ -837,7 +797,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
               console.log(res.data.data, 'verify otp')
               setOpenOtpModal(false);
               if (res.data.data.statusCode === 102) {
-                message.error(res.data.data.statusMsg);
+                //message.error(res.data.data.statusMsg);
                 setVerifiedTextKYC("");
                 setOpenOtpModal(true)
                 setOtpValue("")
@@ -853,7 +813,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
 
             } else if (res.data.resCode === 500) {
               console.log("resp", res.data);
-              message.error(res.data.data.statusMsg);
+              //message.error(res.data.data.statusMsg);
               //setVerify(true);
               setOtpValue('');
             } else {
@@ -867,10 +827,6 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
       .catch((error) => {
         setLoading(false);
         dispatch(setLoader(false));
-        if (error?.response?.status === 404) {
-          if (error?.response?.data?.resCode === 4)
-            message.error("Please Enter Correct User Credentials");
-        }
       });
   };
 
@@ -1188,7 +1144,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
       return Promise.reject(new Error(`Applicant name does not match with ${formData?.kycVerification?.value === "aadharCard" ? "Aadhar card" : "voter id"} name`));
     }
     if (lowerCaseValue !== lowerCasePanName) {
-      message.error('Applicant name does not match with PAN name')
+      //message.error('Applicant name does not match with PAN name')
     }
     return Promise.resolve();
   };

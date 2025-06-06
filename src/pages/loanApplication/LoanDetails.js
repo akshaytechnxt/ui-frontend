@@ -64,7 +64,7 @@ const LoanDetails = ({ form }) => {
   return (
     <Row gutter={[16, { xs: 16, sm: 10, md: 16, lg: 16 }]}>
       <Col xs={24} sm={24} md={24} lg={24} xl={24} className="col-wrapper">
-        <div className="loandetailstitle">1 - Loan Details</div>
+        <div className="loandetailstitle">1 - Merchant Details</div>
         <div className="applicant-documents">
           <div className="currentprogress">Current Progress</div>
           <div className="progress-container">
@@ -74,9 +74,9 @@ const LoanDetails = ({ form }) => {
       </Col>
 
       <Col xs={24} sm={24} md={24} lg={24} xl={24} className="loandetail">
-        <div className="loantitle">Loan Details</div>
+        <div className="loantitle">Merchant Details</div>
         <div className="d-flex flex-column">
-          <div className="typeloan mb-3">Loan Application for</div>
+          <div className="typeloan mb-3">Application for</div>
           <Radio.Group
             value={store?.loanDetails?.applicationType?.value}
             className="pb-3 "

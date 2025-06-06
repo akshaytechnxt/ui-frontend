@@ -187,7 +187,7 @@ function CollectionView() {
         message.success("Receipt Shared Successfully")
       }
       else {
-        message.error(response?.data?.msg)
+        //message.error(response?.data?.msg)
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -203,7 +203,7 @@ function CollectionView() {
         setPdfReceipt(response?.data)
       }
       else {
-        message.error(response?.data?.msg)
+        //message.error(response?.data?.msg)
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -285,14 +285,14 @@ function CollectionView() {
           viewReceipt(response?.data?.paymentId)
         }
         else {
-          message.error(response?.data?.msg)
+          //message.error(response?.data?.msg)
         }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     }
     else {
-      message.error("Check the total Amount and the given Amount")
+      //message.error("Check the total Amount and the given Amount")
     }
   }
 
@@ -316,7 +316,7 @@ function CollectionView() {
         viewReceipt(response?.data?.paymentId)
       }
       else {
-        message.error(response?.data?.msg)
+        //message.error(response?.data?.msg)
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -327,7 +327,7 @@ function CollectionView() {
     console.log(info, "akshay")
     const { file } = info;
     if (!file) {
-      message.error("Please upload a file.");
+      //message.error("Please upload a file.");
       return;
     }
     const isPdfOrPng =
@@ -335,11 +335,11 @@ function CollectionView() {
       file.type === "image/jpeg" ||
       file.type === "image/png";
     if (!isPdfOrPng) {
-      message.error("Only .pdf, .jpg, and .png files are allowed.");
+      //message.error("Only .pdf, .jpg, and .png files are allowed.");
       return;
     }
     if (file.size > 5 * 1024 * 1024) {
-      message.error("Max size of file is 5 MB.");
+      //message.error("Max size of file is 5 MB.");
       return;
     }
     setFiles(file);

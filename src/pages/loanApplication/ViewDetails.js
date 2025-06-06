@@ -141,7 +141,7 @@ function ViewDetails() {
             </Breadcrumb>
           </div>
           <div className="div_row">
-            <div style={{ marginTop: 20 }} className="left_div">Loan Application</div>
+            <div style={{ marginTop: 20 }} className="left_div">Application</div>
           </div>
         </div>
         <div style={{ margin: "3% 3%" }}>
@@ -150,7 +150,7 @@ function ViewDetails() {
               <div className="loandetailstitle" style={{ padding: '15px' }}>Loan Disbursed Details</div>
               <Row style={{ padding: '15px' }}>
                 <Col xl={12} sm={24} md={12} lg={12} xs={24}>
-                  <div style={{ marginBottom: 15, color: "#28B1FF", fontWeight: 500, fontSize: 16 }}>Loan Details</div>
+                  <div style={{ marginBottom: 15, color: "#28B1FF", fontWeight: 500, fontSize: 16 }}>Merchant Details</div>
                   <Row style={{ minHeight: 260, lineHeight: 2.2, border: "1px solid #D2E1FF", padding: "1%", borderRadius: 10, marginRight: 8 }}>
                     <Col style={{ color: "#82888e", fontSize: 13 }} xl={10} sm={10} md={10} lg={10} xs={10}>
                       Loan Type

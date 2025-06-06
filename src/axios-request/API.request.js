@@ -101,16 +101,16 @@ const ExecRequest = (config, options = { secure: true, multipart: false }) => {
             window.location.replace("/");
           }
           //  else if (status === 400) {
-          //   message.error(error.response.data.data.msg);
+          //   //message.error(error.response.data.data.msg);
           // } else {
-          //   message.error(error.response.data.data.msg);
+          //   //message.error(error.response.data.data.msg);
           // }
           resolve(error.response.data);
         } else if (error.request) {
-          message.error("Request failed");
+          //message.error("Request failed");
         } else {
           // console.error(error);
-          message.error(`${error.name}: ${error.message}`);
+          //message.error(`${error.name}: ${error.message}`);
         }
         resolve(null);
       });

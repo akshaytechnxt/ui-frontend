@@ -104,8 +104,8 @@ const ExecRequest = (config, options = { secure: true, multipart: false }) => {
           resolve([]);
         } else {
           // alert(data.errMsg);
-          if (config.method !== "get") message.error(data.errMsg);
-          // message.error(data.errMsg);
+          if (config.method !== "get") //message.error(data.errMsg);
+          // //message.error(data.errMsg);
           resolve(null);
         }
       })
@@ -115,7 +115,7 @@ const ExecRequest = (config, options = { secure: true, multipart: false }) => {
         if (error.response) {
           // console.log('I AM IN CATCHHHHH',error.response);
           // alert(error.response.data.errMsg);
-          message.error(error.response.data.errMsg);
+          //message.error(error.response.data.errMsg);
           if (error.response.status === 400 || error.response.status === 401) {
             try {
               // validation error is comes in 400
@@ -142,16 +142,16 @@ const ExecRequest = (config, options = { secure: true, multipart: false }) => {
               }
             } catch (error) {
               // alert(error.response.data.errMsg);
-              message.error(error.response.data.errMsg);
+              //message.error(error.response.data.errMsg);
             }
           }
         } else if (error.request) {
           // alert('Request failed')
-          message.error("Request failed");
+          //message.error("Request failed");
         } else {
           console.error(error);
           // alert(`${error.name}: ${error.message}`)
-          message.error(`${error.name}: ${error.message}`);
+          //message.error(`${error.name}: ${error.message}`);
         }
         resolve(null);
       });

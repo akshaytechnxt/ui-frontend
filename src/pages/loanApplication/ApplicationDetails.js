@@ -487,7 +487,7 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
       const response = await axiosRequest.get(`service/karza/getVideoKycDetail/${id}`);
       setKycDetail(response?.data[0]);
     } catch (error) {
-      message.error('Error fetching user data');
+      //message.error('Error fetching user data');
     }
   }
 
@@ -506,7 +506,7 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
       setCurrentStep((prevStep) => prevStep + 1);
       message.success("Saved successfully!");
     } else if (currentStep === 7) {
-      setOpenSummaryModal(true);
+      setCurrentStep((prevStep) => prevStep + 1);
     } else if (currentStep === 8) {
       navigate("/Application-Listing");
     }
@@ -671,7 +671,7 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
           </Col>
         </Row>
         <Modal
-          title="Loan Application Summary"
+          title="Application Summary"
           width={4000}
           visible={openSummaryModal}
           onOk={handleOk}
@@ -689,8 +689,8 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
               xs={24}
               md={18}
             >
-              <div className="heading-collection">Loan Details</div>
-              <div className="loantitle pl-2 pt-2 pb-0">Loan Details</div>
+              <div className="heading-collection">Merchant Details</div>
+              <div className="loantitle pl-2 pt-2 pb-0">Merchant Details</div>
               <Row style={{ padding: "1%" }}>
                 <Col
                   className="column-collection"
@@ -700,7 +700,7 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
                   lg={6}
                   md={6}
                 >
-                  <div className="collection-title">Loan Application for</div>
+                  <div className="collection-title">Application for</div>
                   <div className="collection-content">
                     {formatString(storeGetServiceResp?.loanDetails?.applicationType?.value) || "--"}
                   </div>
@@ -1543,7 +1543,7 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
               xs={24}
               md={18}
             >
-              <div className="heading-collection">Existing Loan Details</div>
+              <div className="heading-collection">Existing Merchant Details</div>
               <div className="loantitle pl-2 pt-2 pb-0">
                 Credit Bureau Details
               </div>
@@ -1899,7 +1899,7 @@ const ApplicationDetails = ({ activeTab = '1' }) => {
                   return (
                     <>
                       <div className="loantitle pl-2 pt-2 pb-0">
-                        Existing Loan Details {index + 1} - {item?.bankName}
+                        Existing Merchant Details {index + 1} - {item?.bankName}
                       </div>
                       <Row style={{ padding: "1%" }}>
                         <Col

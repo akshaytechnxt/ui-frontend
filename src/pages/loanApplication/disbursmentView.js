@@ -61,7 +61,7 @@ const DisbursmentView = () => {
                 setKycDetail(response?.data[0]);
                 setActivityLoader(false);
             } catch (error) {
-                message.error('Error fetching user data');
+                //message.error('Error fetching user data');
             }
         }
         getVideoKycdetail()
@@ -105,7 +105,7 @@ const DisbursmentView = () => {
     const handleUpload = async (info) => {
         const { file } = info;
         if (!file) {
-            message.error("Please upload a file.");
+            //message.error("Please upload a file.");
             return;
         }
         const isPdfOrPng =
@@ -113,11 +113,11 @@ const DisbursmentView = () => {
             file.type === "image/jpeg" ||
             file.type === "image/png";
         if (!isPdfOrPng) {
-            message.error("Only .pdf, .jpg, and .png files are allowed.");
+            //message.error("Only .pdf, .jpg, and .png files are allowed.");
             return;
         }
         if (file.size > 5 * 1024 * 1024) {
-            message.error("Max size of file is 5 MB.");
+            //message.error("Max size of file is 5 MB.");
             return;
         }
         setFiles(file);
@@ -140,7 +140,7 @@ const DisbursmentView = () => {
             }
         } catch (error) {
             console.error("API Error:", error);
-            message.error("Error uploading file. Please try again later.");
+            //message.error("Error uploading file. Please try again later.");
         }
     };
 
@@ -204,7 +204,7 @@ const DisbursmentView = () => {
                             </Breadcrumb>
                         </div>
                         <div style={{ padding: "0px 25px" }} className="div_row">
-                            <div className="left_div1">Loan Application</div>
+                            <div className="left_div1">Application</div>
                             <Button onClick={modalOpen} style={{ marginRight: 50 }}>Physical Mandate</Button>
                         </div>
                     </div>
@@ -221,8 +221,8 @@ const DisbursmentView = () => {
                                 xs={24}
                                 md={14}
                             >
-                                <div className="heading-collection">Loan Details</div>
-                                <div className="loantitle pl-2 pt-2 pb-0">Loan Details</div>
+                                <div className="heading-collection">Merchant Details</div>
+                                <div className="loantitle pl-2 pt-2 pb-0">Merchant Details</div>
                                 <Row style={{ padding: "1%" }}>
                                     <Col
                                         className="column-collection"
@@ -232,7 +232,7 @@ const DisbursmentView = () => {
                                         lg={6}
                                         md={6}
                                     >
-                                        <div className="collection-title">Loan Application for</div>
+                                        <div className="collection-title">Application for</div>
                                         <div className="collection-content">
                                             {formatString(storeGetServiceResp?.loanDetails?.applicationType?.value) || "--"}
                                         </div>
@@ -1082,7 +1082,7 @@ const DisbursmentView = () => {
                                 xs={24}
                                 md={18}
                             >
-                                <div className="heading-collection">Existing Loan Details</div>
+                                <div className="heading-collection">Existing Merchant Details</div>
                                 <div className="loantitle pl-2 pt-2 pb-0">
                                     Credit Bureau Details
                                 </div>
@@ -1418,7 +1418,7 @@ const DisbursmentView = () => {
                                         return (
                                             <>
                                                 <div className="loantitle pl-2 pt-2 pb-0">
-                                                    Existing Loan Details {index + 1} - {item?.bankName}
+                                                    Existing Merchant Details {index + 1} - {item?.bankName}
                                                 </div>
                                                 <Row style={{ padding: "1%" }}>
                                                     <Col

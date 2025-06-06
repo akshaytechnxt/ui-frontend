@@ -134,7 +134,7 @@ const CreditxDashboard = () => {
     purpose: "Home Renovation",
     status: "In Progress",
     currentStep: "Basic Details",
-    nextStep: "Loan Details",
+    nextStep: "Merchant Details",
     lastUpdated: "2024-03-12"
   });
 
@@ -231,8 +231,8 @@ const CreditxDashboard = () => {
 
   const handleDemoUpdate = () => {
     const steps = [
-      { current: "Basic Details", next: "Loan Details" },
-      { current: "Loan Details", next: "Income Details" },
+      { current: "Basic Details", next: "Merchant Details" },
+      { current: "Merchant Details", next: "Income Details" },
       { current: "Income Details", next: "Employment Details" },
       { current: "Employment Details", next: "Bank Details" },
       { current: "Bank Details", next: "Document Upload" },
@@ -279,7 +279,7 @@ const CreditxDashboard = () => {
               <SdWidgetCom
                 headeColor={"#003399"}
                 backgroundColorToDo={"#fff"}
-                title_header="Loan Application"
+                title_header="Application"
                 count={totalCount}
                 headerImgSrc={note}
                 toRoute="/Application-Listing"

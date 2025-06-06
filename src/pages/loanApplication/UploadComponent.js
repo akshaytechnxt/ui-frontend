@@ -277,7 +277,7 @@ const UploadComponent = (props) => {
           console.log("response=", response);
           setUploadProgress(100); // Assuming 100% progress for simplicity
           if (response.data.resCode === 500) {
-            message.error("Insufficient Credits");
+            //message.error("Insufficient Credits");
           } else {
             message.success(response?.data?.data?.msg);
           }
@@ -292,17 +292,17 @@ const UploadComponent = (props) => {
           setLoading(false);
           dispatch(setLoader(false));
           setUploadProgress(0);
-          message.error("Failed to upload file");
+          //message.error("Failed to upload file");
         }
       } else {
         setLoading(false);
         dispatch(setLoader(false));
-        message.error("Unsupported file type. Please upload an image or PDF.");
+        //message.error("Unsupported file type. Please upload an image or PDF.");
       }
     } else {
       setLoading(false);
       dispatch(setLoader(false));
-      message.error("Invalid file selected.");
+      //message.error("Invalid file selected.");
     }
   };
 

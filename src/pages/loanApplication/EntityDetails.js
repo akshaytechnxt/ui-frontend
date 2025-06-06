@@ -296,7 +296,7 @@ const EntityDetails = ({
               setPanLinks(false);
             } else if (res?.data?.data?.statusCode === "102") {
               // Handle error code 10609
-              message.error(res.data.data.statusMsg);
+              //message.error(res.data.data.statusMsg);
             } else {
               // dispatch(setUser(res.data));
               // navigate('/Dashboard')
@@ -309,10 +309,6 @@ const EntityDetails = ({
       .catch((error) => {
         setLoading(false);
         dispatch(setLoader(false));
-        if (error?.response?.status === 400) {
-          if (error?.response?.data?.resCode === 8)
-            message.error("Please Enter Correct OTP");
-        }
       });
   };
 
@@ -432,7 +428,7 @@ const EntityDetails = ({
           setVerifyLabel(true)
         }
         else {
-          message.error(response?.data?.resp?.statusMessage);
+          //message.error(response?.data?.resp?.statusMessage);
           // form.setFieldsValue({
           //   uniqueBusinessIdentityType: "",
           //   uniqueBusinessIdentityNumber: "",

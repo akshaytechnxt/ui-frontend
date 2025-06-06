@@ -20,9 +20,9 @@ const SuccessApplication = ({ id }) => {
           <div style={{ padding: 5 }} className={status === 1 ? "error" : "success"}>{message?.data?.title}</div>
           <div className='loansuccesstext' style={{ padding: 5 }}>
             {status === 2
-              ? "You have successfully submitted the Loan application."
-              : status === 1 ? "Your loan application has been rejected as it does not meet our current lending criteria." :
-                status === 3 ? "Your Loan Application has been Sanctioned." : "Proposal assessment not found."}
+              ? "You have successfully submitted the application."
+              : status === 1 ? "Your application has been rejected as it does not meet our current lending criteria." :
+                status === 3 ? "Your Application has been Sanctioned." : "Proposal assessment not found."}
           </div>
           {status === 2 && (
             <div style={{ padding: 10 }} className='eval'>

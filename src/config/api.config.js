@@ -1,7 +1,7 @@
 const NODE_ENV = 'development';
 
-const DEV_BASE_URL = 'https://creditx-node-dev.salesdrive.app/';
-const UAT_BASE_URL = 'https://creditx-node-dev.salesdrive.app/'; // WE WILL ADD LATER
+const DEV_BASE_URL = 'https://localhost:3000/';
+const UAT_BASE_URL = 'https://localhost:3000/'; // WE WILL ADD LATER
 const PROD_BASE_URL = 'https://b2bnode.iorta.in/b2b/'; // WE WILL ADD LATER
 const PR_AMERICANO_DEV_BASE_URL = 'https://pramericanodedev.salesdrive.app/sdx-api/';
 

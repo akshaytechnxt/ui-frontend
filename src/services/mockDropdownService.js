@@ -66,7 +66,6 @@ const mockDropdownData = {
   ],
   applicationType: [
     { label: "Individual", value: "individual" },
-    { label: "Joint", value: "joint" },
     { label: "Entity", value: "entity" }
   ],
   typeOfLoan: [

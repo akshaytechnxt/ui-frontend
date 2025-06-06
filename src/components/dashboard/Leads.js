@@ -74,7 +74,7 @@ function Leads({ leads }) {
             <Breadcrumb.Item style={{ color: '#fff' }}>Dashboard</Breadcrumb.Item>
             <Breadcrumb.Item style={{ color: '#fff' }}>Application-Listing</Breadcrumb.Item>
           </Breadcrumb>
-          <div style={{ color: '#fff', fontSize: 28, fontWeight: 600, marginBottom: 24 }}>Loan Application</div>
+          <div style={{ color: '#fff', fontSize: 28, fontWeight: 600, marginBottom: 24 }}>Application</div>
           <div style={{ display: 'flex', gap: 16 }}>
             {FILTERS.map(f => (
               <button
@@ -135,7 +135,7 @@ function Leads({ leads }) {
                       <div style={{ fontWeight: 500, color: '#333' }}>{lead.dob}</div>
                     </Col>
                     <Col span={12}>
-                      <div style={{ color: '#666' }}>Loan Amount</div>
+                      <div style={{ color: '#666' }}>Amount</div>
                       <div style={{ fontWeight: 500, color: '#333' }}>₹ {lead.amount.toLocaleString()}</div>
                     </Col>
                     <Col span={12}>

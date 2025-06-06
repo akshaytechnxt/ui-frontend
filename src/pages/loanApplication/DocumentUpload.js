@@ -115,7 +115,7 @@ const DocumentUpload = ({ id, applicantId, status, setStatus }) => {
           clearInterval(interval);
         }
         if(response.data.length > 3){
-          message.error("application rejected due to exceed max attempt")
+          //message.error("application rejected due to exceed max attempt")
           alert("Proposal Has been rejected due to customer exceeds max attempt for videoKYC")
           navigate("/dashboard")
         }
@@ -315,7 +315,7 @@ const DocumentUpload = ({ id, applicantId, status, setStatus }) => {
         message.success(response?.data?.msg)
       }
       else {
-        message.error(response?.data?.msg?.[0])
+        //message.error(response?.data?.msg?.[0])
       }
     } catch (error) {
       console.error('Error fetching data:', error);

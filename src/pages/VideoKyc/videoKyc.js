@@ -125,7 +125,7 @@ const VideoKyc = () => {
         setRecordedChunks([]);
       } catch (error) {
         console.error('Error fetching data:', error);
-        message.error('Error fetching user data');
+        //message.error('Error fetching user data');
       }
     };
 
@@ -152,7 +152,7 @@ const VideoKyc = () => {
     } catch (error) {
       setScreenView(null)
       console.error('Error uploading video:', error);
-      message.error('Error uploading video');
+      //message.error('Error uploading video');
     }
   }, [recordedChunks, userData, token]);
 

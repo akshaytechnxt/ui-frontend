@@ -293,7 +293,7 @@ const MasterContest = () => {
         activeKey={activeKey}
         setActiveKey={setActiveKey}
         onTabClick={() => handleTabClick()}
-        header="Loan Application"
+        header="Application"
       />
       <div className="container top_container">
         {filteredData?.length === 0 ? (

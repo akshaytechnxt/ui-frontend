@@ -196,11 +196,11 @@ const TodoTab = ({ button, isModalVisible, setIsModalVisible, recordData, onTodo
                     }
                 })
                 .catch((error) => {
-                    message.error(error);
+                    //message.error(error);
                 });
         }
         else {
-            message.error("priority Should be mandatory")
+            //message.error("priority Should be mandatory")
         }
     }
 

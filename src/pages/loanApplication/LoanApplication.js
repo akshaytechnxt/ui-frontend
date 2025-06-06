@@ -107,12 +107,12 @@ const LoanApplication = () => {
 			file.type === "image/png";
 
 		if (!isPdfOrPng) {
-			message.error("Only .pdf, .jpg, and .png files are allowed.");
+			//message.error("Only .pdf, .jpg, and .png files are allowed.");
 			return;
 		}
 
 		if (file.size > 5 * 1024 * 1024) {
-			message.error("Max size of file is 5 MB.");
+			//message.error("Max size of file is 5 MB.");
 			return;
 		}
 
@@ -321,7 +321,7 @@ const LoanApplication = () => {
 
 	return (
 		<>
-			<TabsComp header="Loan Application" showBreadCrum={true} />
+			<TabsComp header="Application" showBreadCrum={true} />
 			<div style={{ margin: "3% 3%" }}>
 
 				<Tabs className='tab-query' type="card" activeKey={activeTab} size={size} onChange={handleTab}>

@@ -146,7 +146,7 @@ export default function CalendarEvent({ Data, setIsModalVisible, isModalVisible,
         }
       })
       .catch((error) => {
-        message.error(error);
+        //message.error(error);
       });
   }
 

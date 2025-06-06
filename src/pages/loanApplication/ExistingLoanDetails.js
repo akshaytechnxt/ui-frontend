@@ -371,7 +371,7 @@ const ExistingLoanDetails = ({
       {loading && <Sdloader sdloader={loading} />}
       <Row gutter={[16, { xs: 16, sm: 10, md: 16, lg: 16 }]}>
         <Col xs={24} sm={24} md={24} lg={24} xl={24} className="col-wrapper">
-          <div className="loandetailstitle">4 - Existing Loan Details</div>
+          <div className="loandetailstitle">4 - Existing Merchant Details</div>
           <div className="applicant-documents">
             <div className="currentprogress">Current Progress</div>
             <div className="progress-container">
@@ -661,7 +661,7 @@ const ExistingLoanDetails = ({
                 return (
                   <Collapse.Panel style={{ marginBottom: '20px', border: '1px solid #6d92d1', borderRadius: '10px' }}
                     showArrow={false}
-                    header={`Existing Loan Details - ${item?.existingBankName} `}
+                    header={`Existing Merchant Details - ${item?.existingBankName} `}
                     // key={index.toString()}
                     extra={genExistingExtra(activeIndex === index)}
                   >
@@ -837,7 +837,7 @@ const ExistingLoanDetails = ({
 
         <div className="pt-3 d-flex justify-content-between">
           <div style={{ marginBottom: 20 }} className="permanentaddress">
-            Existing Loan Details
+            Existing Merchant Details
           </div>
           {/* <div className="locatemap">Locate on Map</div> */}
         </div>
@@ -850,7 +850,7 @@ const ExistingLoanDetails = ({
           {[...Array(numPanels)].map((_, index) => (
             <Panel
               showArrow={false}
-              header={`Existing Loan Details ${index + 1}`}
+              header={`Existing Merchant Details ${index + 1}`}
               key={index.toString()}
               extra={genExtra(activeIndex === index)}
             >
@@ -1019,7 +1019,7 @@ const ExistingLoanDetails = ({
             style={{ border: "1px solid #003399", color: "#003399" }}
             onClick={addPanel}
           >
-            + Add Existing Loan Details
+            + Add Existing Merchant Details
           </Button>
         </div>
       </Form>

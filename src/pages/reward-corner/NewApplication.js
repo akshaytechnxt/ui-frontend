@@ -265,7 +265,7 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
             className="p-3"
           >
             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-              <div className="typeloan mb-3">Loan Application for</div>
+              <div className="typeloan mb-3">Application for</div>
               {applicationTypes.map(type => (
                 <Radio.Group
                   onChange={() => onRadioChange1(type)}
@@ -656,7 +656,7 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
               <div className="success">Congratulations!</div>
               <div className="loansuccesstext p-3">
                 {inputValue?.fullName} meets the eligibility criteria for <br />{" "}
-                the loan application.
+                the application.
               </div>
               <Button
                 className="applicationlisting"
@@ -686,7 +686,7 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
               <div className="error">We are Sorry!</div>
               <div className="loansuccesstext p-3">
                 {inputValue?.fullName} doesnt meets the eligibility criteria for <br />{" "}
-                the loan application this time.
+                the application this time.
               </div>
               <Button
                 className="applicationlisting"

@@ -43,9 +43,9 @@ const Login = () => {
     try {
       setLoading(true);
       dispatch(setLoader(true));
-      
+
       const response = await mockAuthService.verifyOTP(email, otpValue);
-      
+
       if (response.status === 200) {
         if (response.data.errCode === -1) {
           navigate('/Dashboard');
@@ -57,7 +57,7 @@ const Login = () => {
     } catch (error) {
       if (error?.response?.status === 400) {
         if (error?.response?.data?.resCode === 8) {
-          message.error("Please Enter Correct OTP");
+          //message.error("Please Enter Correct OTP");
         }
       }
     } finally {
@@ -70,9 +70,9 @@ const Login = () => {
     try {
       setLoading(true);
       dispatch(setLoader(true));
-      
+
       const response = await mockAuthService.requestOTP(email);
-      
+
       if (response.status === 200) {
         message.success(response.data.data.msg);
         if (response.data.errCode === 10609) {
@@ -84,7 +84,7 @@ const Login = () => {
     } catch (error) {
       if (error?.response?.status === 404) {
         if (error?.response?.data?.resCode === 4) {
-          message.error("Please Enter Correct User Credentials");
+          //message.error("Please Enter Correct User Credentials");
         }
       }
     } finally {
@@ -151,13 +151,13 @@ const Login = () => {
                     label="Enter OTP"
                     name="otp"
                   >
-                    <InputOTP 
-                      autoFocus 
-                      inputType="numeric" 
-                      length={4} 
-                      className="center-input-message" 
+                    <InputOTP
+                      autoFocus
+                      inputType="numeric"
+                      length={4}
+                      className="center-input-message"
                       value={otpValue}
-                      onChange={handleOtpChange} 
+                      onChange={handleOtpChange}
                     />
                   </Form.Item>
                   <div className="details d-flex justify-content-between">
@@ -171,7 +171,7 @@ const Login = () => {
             </Col>
 
             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-              <Form.Item>
+              <Form.Item style={{ marginTop: 20 }}>
                 {!verify ? (
                   <Button htmlType="submit" className="otpbutton" onClick={verifyOtp}>
                     Send OTP
