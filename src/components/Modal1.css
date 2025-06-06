@@ -1,0 +1,179 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 400px;
+  margin-top: 60px;
+  position: relative;
+}
+
+/* Profile Modal Specific Styles */
+.indicationArrowProfile {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.sideMenu {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.menuHeader {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.profileData p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.menuBody {
+  padding: 15px;
+}
+
+.logoutContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Notification Modal Specific Styles */
+.indicationArrowNotif {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.sideMenu1 {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.activity-block1 {
+  padding: 15px;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.notificationHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.notificationHead p {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.notificationHead button {
+  background: none;
+  border: none;
+  color: #003399;
+  cursor: pointer;
+}
+
+.menuBody1 {
+  margin-top: 10px;
+}
+
+.notification_data {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.list_data h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.list_data p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.date {
+  text-align: right;
+}
+
+.date p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.hr-line {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+.logoutContainer1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.logoutContainer1 img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+}
+
+.logoutContainer1 p {
+  margin: 0;
+  color: #666;
+}
+
+.notification_footer {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.view_button button {
+  background: #003399;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view_button button:hover {
+  background: #002266;
+} 

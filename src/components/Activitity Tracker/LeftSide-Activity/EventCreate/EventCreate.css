@@ -1,0 +1,44 @@
+.EventCreate-dateChange {
+  display: flex;
+  justify-content: space-between;
+  /* margin:30px 0 ; */
+  margin-bottom: 30px;
+  text-align: center;
+}
+.EventCreate-dateChange div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+}
+.EventCreate-btn article {
+  color: #5ea5c0;
+  font-weight: bold;
+  font-size: 12px;
+}
+.EventCreate-btn span {
+  border-radius: 4px;
+}
+.EventCreate-btn span svg {
+  margin-left: 10px;
+  font-size: 25px;
+  border-radius: 2px;
+  color: #3b371e;
+}
+@media (min-width: 320px) {
+  .EventCreate-Right > img {
+    height: 18px;
+    width: 18px;
+    display: flex;
+  }
+  .EventCreate-Right p {
+    font-size: 18px;
+    /* font-weight: bold; */
+    margin: 0 5px;
+  }
+}
+@media (max-width: 650px) {
+  .EventCreate-Right p {
+    font-size: 15px;
+  }
+}

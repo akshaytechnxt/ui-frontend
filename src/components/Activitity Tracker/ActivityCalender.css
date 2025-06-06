@@ -1,0 +1,148 @@
+.eventCart {
+  color: #5eadd2;
+}
+.ActivityCalender-container {
+  border-width: 0;
+  border-style: none;
+  border-color: #ffffff;
+  padding-top: 10px;
+  margin-top: 60px;
+}
+.ActivityCalender-Header {
+  margin-top: -20px;
+}
+
+.ActivityCalender-container > .ant-card-bordered > .ant-card-body {
+  padding: 18px !important;
+}
+.CardBody button {
+  border: none;
+  /* margin: 0 6px; */
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 0;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  padding: 5px;
+  cursor: pointer;
+  /* width: 90px; */
+  color: #000;
+}
+.person {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+.CardBody .activate {
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0;
+  padding: 5px;
+  background-color: #3c3d3d;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  cursor: pointer;
+  width: 90px;
+  /* background-image: url("./icons/person_white.png"); */
+}
+.ActivityCalender-container-TodoCard {
+  /* box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%); */
+  border-radius: 2px;
+  height: 100%;
+  width: 96%;
+}
+
+.ActivityCalender-container-TodoCard {
+  margin-bottom: 10px;
+}
+
+.ActivityCalender-container > div {
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.Activity-Right {
+  /* margin-left: 3%; */
+  /* box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%); */
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+  height: 100%;
+  margin-bottom: 10px;
+}
+@media (min-width: 320px) {
+  .ActivityCalender-Header-img {
+    height: 150px;
+    width: 100%;
+  }
+
+  .EventCreate-btn > img {
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+  }
+  /* .ActivityCalender-container>.ant-row{
+        width: 400px;
+    } */
+}
+
+@media (max-width: 436px) {
+  .ActivityCalender-container {
+    border-width: 0;
+    border-style: none;
+    border-color: #ffffff;
+    padding-top: 10px;
+    margin-top: 0;
+  }
+}
+
+/* @media (max-width:820px){
+    .ActivityCalender-container>.ant-card-bordered>.ant-card-body{
+        padding: 15px !important;
+    }
+}
+
+@media (max-width:780px){
+    .ActivityCalender-container>.ant-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .Activity-Right{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ActivityCalender-container-TodoCard{
+       width: 100%;
+       margin-top: 20px;
+    }
+    .ActivityCalender-container-TodoCard>.ant-card{
+        width: 112%;
+        margin-left: -43px;
+    }
+}
+@media (max-width:770px){
+    .ActivityCalender-container{
+        width: 110%;
+    }
+    .ActivityCalender-container>.ant-row{
+        width: 830px;
+    }
+
+}
+@media (max-width:770px){
+    .ActivityCalender-container-TodoCard{
+        margin-left: 0;
+        width: 80%;
+    }
+    .ActivityCalender-container-TodoCard>.ant-card{
+        width: 100%;
+        margin-left: 0;
+    }
+    .Activity-Right{
+        width: 80%;
+    }
+} */

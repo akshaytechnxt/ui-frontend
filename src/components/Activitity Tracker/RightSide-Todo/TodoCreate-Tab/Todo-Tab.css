@@ -1,0 +1,279 @@
+/* @media screen and (min-width: 992px){
+    .todo-popup-container-width {
+        width: 48%;
+    }
+}
+@media screen and (min-width: 768px){
+    .todo-popup-container-width {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 320px){
+    .todo-popup-container-width {
+        width: 90%;
+    }
+}
+.todo-whole-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100px;
+    width: 400px;
+    border-radius: 3px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    box-shadow: 0 5px 45px rgb(0 0 0 / 50%);
+} */
+.todo-popup-container-width{
+    width: 45% !important;
+}
+.Todo-Create-Container{
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    margin-top: -23px;
+}
+.Todo-Col-shadow-box{
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+.Todo-Create-Container> input{
+    border: none;
+}
+.ant-modal-footer{
+    display: none;
+}
+.Todo-Create-SearchBox{
+    /* margin-left: 5px; */
+    /* background-color: #a5a9ac; */
+    width: 55%;
+    /* border: 0.5px solid #C1C8CC; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 2px 2px #00000024; */
+}
+.Todo-Create-SearchBox>input{
+    padding: 7px;
+    width: 89%;
+    border: none;
+    color: #666767;
+    opacity: 1;
+    /* font-family: robotoregular; */
+    font-size: 14px;
+    border: 0px solid #C1C8CC;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.Todo-Create-SearchBox>span{
+    margin-left: 0px;
+    color: #fff;
+}
+.Todo-Create-TextBox{
+    /* margin: 15px 0; */
+    border: none;
+}
+.Todo-Create-TextBox>input{
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border: 1px solid #e5e8eb;
+    outline: none;
+}
+.Todo-Create-Priority>p,.Todo-Create-Header>p{
+    /* font-weight: bold; */
+    font-size: 14px;
+}
+.Todo-Create-Priority>button{
+    margin: 5px;
+    width: 85px;
+    border-radius: 5px;
+}
+.todo-header-style > div > .ant-modal-header {
+    /* box-shadow: 0px 5px 7px #00000029; */
+    background-color: #3b371e;
+    /* height: 100vh !important; */
+}
+
+.todo-header-style .ant-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.todoSearch .ant-input-group > .ant-input:first-child, .ant-input-group-addon:first-child {
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    font-size: 14px !important;
+    height: 40px;
+    /* font-family: 'robotoregular !important'; */
+}
+.Todo-Create-FooterReminder{
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Todo-Create-FooterReminder>p{
+    font-size: 14px;
+    /* font-weight: bold; */
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.Todo-Create-FooterReminder>input{
+    border: 1px solid #C1C8CC;
+    padding: 5px;
+    border-radius: 3px;
+}
+.Todo-Create-FooterReminder>button{
+    background-color: #e46a25;
+    color: #fff;
+    width: 200px;
+    border-radius: 5px;
+    outline: none;
+}
+.Todo-Create-FooterReminder>button:hover{
+    background-color: #e46a25;
+    color: #fff;
+    outline: none;
+}
+.buttonOpacity{
+    opacity: .5 !important;
+}
+.ant-modal-body {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.5715;
+    word-wrap: break-word;
+}
+.ant-modal-title {
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    word-wrap: break-word;
+}
+
+
+@media (min-width:320px){
+    .Todo-Create-FooterReminder-Button{
+        display: flex;
+        width: auto;
+        background-color: #e46a25;
+        color: #fff;
+        padding: 6px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    }
+    .Todo-Create-FooterReminder-mob{
+        /* display: flex; */
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        /* align-items: center; */
+    }
+    .Todo-Create-Container{
+        padding: 0px;
+        margin-top: 0px;
+    }
+    .Todo-Col-shadow-box{
+        padding: 20px;
+        /* box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%); */
+    }
+    .ant-modal-body {
+        padding: 15px;
+        font-size: 14px;
+        line-height: 1.5715;
+        word-wrap: break-word;
+    }
+    .Todo-Create-SearchBox{
+        /* margin-left: 5px; */
+        /* background-color: #a5a9ac; */
+        width: 100%;
+        /* border: 0.5px solid #C1C8CC; */
+        /* border-radius: 5px; */
+        /* box-shadow: 0px 2px 2px #00000024; */
+    }
+    .todo-mb20{
+        margin-bottom: 20px;
+    }
+    .todo-ml10{
+        margin-left: 0px;
+    }
+}
+@media (min-width:920px){
+    .todo-ml10{
+        margin-left: 10px;
+    }
+    .Todo-Create-SearchBox{
+        /* margin-left: 5px; */
+        /* background-color: #a5a9ac; */
+        /* width: 55%; */
+        /* border: 0.5px solid #C1C8CC; */
+        /* border-radius: 5px; */
+        /* box-shadow: 0px 2px 2px #00000024; */
+    }
+    .todo-mb20{
+        margin-bottom: 10px;
+    }
+    .Todo-Create-FooterReminder-Button{
+        display: flex;
+        width: 180px;
+        background-color: #e46a25;
+        color: #fff;
+        padding: 6px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    }
+}
+
+/* @media (max-width:980px){
+    .Todo-Create-SearchBox{
+        display: flex;
+        align-items: center;
+    }
+    .Todo-Create-SearchBox>span{
+        margin-left:0;
+        width: 10%;
+    }
+} */
+@media (max-width:1140px){
+    .todo-popup-container-width{
+        width: 60% !important;
+    }
+}
+@media (max-width:920px){
+    .todo-popup-container-width{
+        width: 80% !important;
+    }
+}
+@media (max-width:480px){
+    .todo-popup-container-width{
+        width: 100% !important;
+    }
+}
+@media (max-width:1220px){
+    .Todo-Create-FooterReminder >button{
+        width: 150px;
+    }
+}
+
+@media (max-width:1080px){
+    .Todo-Create-FooterReminder>button{
+        width: 100px;
+    }
+}

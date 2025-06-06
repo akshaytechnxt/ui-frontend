@@ -1,0 +1,67 @@
+.Todo-Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6e9eb;
+}
+.Todo-CreateBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Todo-CreateBtn article{
+    font-size: 13px;
+    color: #9da19f;
+    margin-right: 10px;
+}
+.Todo-CreateBtn span{
+    color: #3b371e;
+    /* background: transparent; */
+    font-size: 22px;
+}
+.Todo-Button{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.Todo-Button div:nth-child(1){
+    margin-right: 16px;
+}
+/* .Todo-Button-Todo button, .Todo-Button-Archive button{
+    width: 100px;
+    border: none;
+} */
+
+.TodoButtons{
+    min-width: 120px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 3px;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important; */
+    /* border-color: #C1C8CC; */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    /* font-family: robotoregular; */
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+@media (max-width:860px){
+    .TodoButtons{
+        min-width: 100px;
+    }
+}
+@media (min-width: 320px){
+
+    .active{
+        background-color: #00ACC1;
+        color:#fff
+    }
+    .TodoCards{
+        margin: 15px 0;
+    }
+}

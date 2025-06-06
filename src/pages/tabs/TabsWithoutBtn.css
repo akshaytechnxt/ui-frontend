@@ -1,0 +1,230 @@
+/* MainTabs.css */
+
+.header-img {
+    background-image: url('../../assets/header-tabs.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* Remove the border from the top of the tabs */
+.mainTabsStyle2 .ant-tabs-top > .ant-tabs-nav::before {
+    /* display: none; */
+  }
+
+/* tabs background */
+.mainTabsStyle2 .ant-tabs-card.ant-tabs-small >.ant-tabs-nav .ant-tabs-tab{
+    background: #ccc;
+}
+/* active tabs color */
+.mainTabsStyle2 .ant-tabs-card >.ant-tabs-nav .ant-tabs-tab-active{
+    color: #fff !important;
+    background-color: #f15a73 ;
+}
+/* active tab btn color  */
+.mainTabsStyle2 .ant-tabs .ant-tabs-tab.ant-tabs-tab-active, .mainTabsStyle2 .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #fff;
+}
+.mainTabsStyle2 .ant-tabs .ant-tabs-tab:hover, .ant-tabs-tab-btn{
+    color: #6D8BAA;;
+}
+/* Style for tab buttons */
+.mainTabsStyle2 .ant-tabs-nav-list .ant-tabs-tab {
+    min-width: 135px;
+    height: 35px;
+    margin-right: 15px;
+    background-color: #D2DDE8;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500; 
+    font-size: 14px; 
+  }
+  .header_tabs{
+    display: flex;
+      flex-direction: column;
+      gap: 6px;
+  }
+
+  .header-img-height {
+    height: 240px;
+  }
+
+.header-title{
+    font-size: 2.5rem;
+    color: #00ACC1;
+    /* margin: 10px 0 10px 120px; */
+    font-weight:bold ;
+    padding-left: 20px;
+}
+
+
+.sales-Header{
+    font-family: robotobold;
+    font-size: 26px;
+    color: #00ACC1;
+    font-weight: bold;
+    /* margin: -3px 0 -25px 19vh; */
+}
+
+@media (max-width:620px){
+    /* .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+        color: #9197ad;
+    } */
+    .TabMenu-Card{
+        margin: 0 !important;
+    }
+    .TabMenu-Card>.ant-tabs-nav{
+        background-color: #f7fbff !important;
+        padding: 0 0px !important;
+        box-shadow: 0px 1px 10px 0px #0000003d;
+        /* margin-bottom: 2px; */
+    }
+    /* .TabMenu-Card>.ant-tabs-nav-wrap>.ant-tabs-nav-list>.ant-tabs-tab,
+    .ant-tabs-tab-active,
+    .ant-tabs-tab{
+        width: 150px !important;
+    } */
+}
+
+
+.TabMenu-Card{
+    background-color: #f7fbff;
+}
+/*header button */
+.tab-section .ant-tabs-tab{
+    height: 35px !important;
+    font-weight: 500 !important;
+    font-size: 14px;
+    border-radius: 20px !important;
+    /*background: #D2DDE8 !important;*/
+}
+@media (max-width:375px) { 
+   
+}
+@media (max-width:620px) {
+    /* .ant-tabs-tab,
+    .ant-tabs-tab-active
+    .ant-tabs-tab:hover,
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+        color: #7e95ad;
+    } */
+  
+}
+@media (min-width:621px){
+    .mainTabsStyle2 .ant-tabs-tab{
+        min-width: 135px;
+    }
+    /* .ant-tabs-tab-btn{
+        margin: 0  auto;
+    } */
+}
+
+
+
+/* sdrest demo new */
+/* .tab-container> .ant-tabs>.ant-tabs-nav{ 
+    border-bottom: none;
+}
+.tab-container>.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab{
+    border: none;
+}
+.tab-container>.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before, 
+.ant-tabs-top > div > .ant-tabs-nav::before, .ant-tabs-bottom > div > .ant-tabs-nav::before{
+    border: none;
+}
+
+.tab-container>div>div>div>div>div>.ant-tabs-tab-btn{
+    height: 100px;
+    width: 150px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tab-pane{
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    
+}
+
+.tab-style{
+    position: relative;
+}
+
+.tab-style>.ant-btn{
+    position: absolute;
+    top:-30px;
+    right:0;
+}
+.ant-tabs-tab-btn{
+    padding: 40px;
+    color: #000;
+    background-color: #fff;
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+    
+}
+.ant-tabs-tab{
+    padding: 0;
+}
+.ant-tabs-tab-active{
+    background-color: rgb(1, 180, 187);
+}
+.ant-tabs-content-holder{
+    display: none ;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #fff;
+    background-color: rgb(1, 180, 187);
+}
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab{
+    margin: 10px;
+    padding: 0;
+} */
+
+
+
+
+/* sdrest styling old*/
+/* 
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.tab-container>.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active{
+    background-color: #fafafa;
+    color: #ffffff;
+}
+.tab-pane:active{
+    color: rgb(1, 180, 187);
+    background-color: rgb(1, 180, 187);
+}
+.tab-pane>.ant-card-body>button{
+    position: absolute;
+    top:5px;
+    right:5px;
+}  */
+  

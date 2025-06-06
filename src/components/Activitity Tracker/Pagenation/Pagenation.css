@@ -1,0 +1,32 @@
+.Pagenation-ActivityTracker{
+    border-top: 1px solid #e6e9eb;
+    margin-top: 20px;
+}
+.Pagenation-Content{
+    display: flex;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.Pagenation-Content p:nth-child(1){
+    font-size: 14px;
+    color: #e46a25;
+    margin-right: 10px;
+}
+.Pagenation-Number{
+    margin-left: 10px;
+
+}
+.Pagenation-OutOfData{
+    font-size: 14px;
+}
+@media (max-width:1020px){
+    .Pagenation-Number{
+        margin-left: 40%;
+    }
+}
+@media (max-width:820px){
+    .Pagenation-Number{
+        margin-left: 30%;
+    }
+}

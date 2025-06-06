@@ -1,0 +1,43 @@
+/*  */
+.ModalBox-Open>.ant-modal-header{
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 7px #00000029;
+    opacity: 1;
+}
+
+.ModalBox-Open-Card{
+    margin: 20px;
+    padding: 15px;
+    padding-top: 5px;
+    border: 1px solid #E6E9EB;
+    box-shadow: 0px 2px 2px #00000029;
+}
+.ModalBox-Open-Btn>button{
+    background-color: #00acc1;
+    padding: 6px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 2px 2px #00000029;
+    border: 0.5px solid #C1C8CC;
+    border-radius: 5px;
+    opacity: 1;
+    margin-right: 10px;
+    color: #fff;
+}
+.ModalBox-Open-Update{
+    text-align: center;
+}
+.ModalBox-Open-Update>button{
+    margin-top: 10px;
+    background-color: 6px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #e46a25;
+    box-shadow: 0px 2px 2px #00000029;
+    border: 0.5px solid #C1C8CC;
+    border-radius: 5px;
+    opacity: 1;
+    margin-right: 10px;
+    color: #fff;
+}

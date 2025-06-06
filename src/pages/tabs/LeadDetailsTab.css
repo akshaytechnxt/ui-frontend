@@ -1,0 +1,24 @@
+.internal-tab{
+    /* padding: 20px 20px; */
+    border-radius: 5px;
+    /* background-color: #fff; */
+    /* box-shadow:  1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12); */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    max-height: 15rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+@media (max-width:524px) {
+    .internal-tab{
+        margin-left: 0px;
+        padding: 0px 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        box-shadow:none
+    }
+}

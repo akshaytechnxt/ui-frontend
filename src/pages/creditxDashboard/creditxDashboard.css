@@ -1,0 +1,440 @@
+.top_header_dashboard {
+  background: linear-gradient(180deg, #003399 21%, #092358);
+  font-size: 16px;
+  color: #fff;
+  /* font-family: 'Open Sans'; */
+  min-height: 222px;
+}
+
+.top_header_dashboard .wrapper_text {
+  padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.top_header_dashboard .greeting {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  /* font-family: "Open Sans"; */
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+}
+
+.top_header_dashboard .user {
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  /* font-family: 'Open Sans'; */
+  color: #fff;
+  display: flex;
+  text-align: left;
+}
+
+.user {
+  text-transform: capitalize;
+}
+
+.top_header_dashboard .login_details {
+  font-size: 12px;
+  /* font-family: 'Open Sans'; */
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+}
+
+.main_content_dashboard {
+  margin-top: -95px;
+  margin-bottom: 20px;
+}
+
+.query_card .list_item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #cacfd2;
+}
+
+.query_card .list_text {
+  width: 200px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 150% */
+  letter-spacing: -0.24px;
+}
+
+.query_card .view_button {
+  display: flex;
+  padding: 6px 24px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  justify-content: end;
+  color: var(--Primary-colour, #039);
+  border-radius: 6px;
+  border: 1px solid var(--Primary-colour, #039);
+  background: #fff;
+  height: 28px;
+}
+
+.query_card .view_all_button {
+  color: var(--Secondary-Colour, #28b1ff);
+  /* font-family: "Open Sans"; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  background: #fff;
+}
+
+.query_card .list_item_wrap {
+  overflow-y: auto;
+  width: 100%;
+  max-height: 200px;
+}
+
+.query_card .list_item_wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.to_do_card .todo_list_item_wrap {
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.to_do_card .todo_list_item_wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.weeks {
+  color: var(--Primary-colour, #039);
+  /* font-family: "Open Sans"; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.day,
+.date {
+  color: var(--TYPOGRAPHY-COLOUR-Heading-Text, #444);
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--TYPOGRAPHY-COLOUR-Heading-Text, #444);
+  /* font-family: "Open Sans"; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.weekdays .days {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px;
+}
+
+.active_day {
+  display: flex;
+  padding: 6px 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  background: #e5f1ff;
+}
+
+.calendor_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.activity_tracker_card .activity_card_list_items {
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity_tracker_card .activity_card_list_items::-webkit-scrollbar {
+  display: none;
+}
+
+.ant-spin-nested-loading{
+  width: 100%;
+}
+
+.activity_tracker_card .appointment_card_item,
+.activity_tracker_card .policy_renewal_card,
+.activity_tracker_card .birthday_card_item {
+  display: flex;
+  padding: 10px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--background-outline-outline, #efeef4);
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.06);
+}
+
+.activity_tracker_card .appointment_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.appointment_card_header .title,
+.policy_renewal_card .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.appointment_card_header .title_text,
+.appointment_card_header .appointment_time,
+.policy_renewal_card .title_text,
+.policy_renewal_card .renewal_time,
+.birthday_card_item .birthday_date {
+  color: var(--Primary-colour, #039);
+  /* font-family: "Open Sans"; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.policy_renewal_card .policy_renewal_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.policy_renewal_card .policy_renewal_details {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.details_text {
+  color: var(--Heading-Text, #444);
+  /* font-family: "Open Sans"; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.detail_label {
+  color: var(--Sub-Heading-Text, #737373);
+  /* font-family: "Open Sans"; */
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.policy_renewal_card .policy_number,
+.policy_renewal_card .customer,
+.policy_renewal_card .day_of_renewal {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+}
+
+.policy_renewal_card .days_renewal .label_text {
+  color: #cb1111;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: #ffe2e2;
+}
+
+.birthday_card_item_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.birthday_card_item_details .user_birthday {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user_birthday .name {
+  color: #cb1111;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.user_birthday .ant-btn-primary {
+  color: #fff;
+  background-color: #dee3e9;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0);
+}
+
+.user_birthday :where(.css-dev-only-do-not-override-qgg3xn).ant-btn-primary:not( :disabled):not(.ant-btn-disabled):hover {
+  color: #fff;
+  background-color: #dee3e9;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0);
+}
+
+.resource_card .placeholder {
+  color: var(--Primary-colour, #039);
+  text-align: center;
+  /* font-family: "Open Sans"; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.resource_card .resource_card_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.number_count {
+  color: var(--Primary-colour, #039);
+  text-align: center;
+  /* font-family: "Open Sans"; */
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  cursor: pointer;
+}
+
+.number_count4 {
+  color: rgb(137, 133, 133);
+  text-align: center;
+  /* font-family: "Open Sans"; */
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.28px;
+}
+
+.number_count1 {
+  color: #FF8A00;
+  text-align: center;
+  /* font-family: "Open Sans"; */
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.28px;
+}
+
+.number_count2 {
+  color: #E34234;
+  text-align: center;
+  /* font-family: "Open Sans"; */
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.28px;
+}
+
+.tooltips {
+  display: flex;
+  flex-direction: column;
+  color: #003399;
+  background-color: #fff;
+  row-gap: 10px;
+  width: 207px;
+  height: 160px;
+  padding: 16px;
+  border: 1px;
+  gap: 16px;
+  /* background-color: #fff;
+  border: 1px solid #f7f7f7; */
+  /* box-shadow: 0px 4px 13px 0px #0000000f; */
+}
+
+.floatbtn .ant-float-btn-body {
+  background-color: #003399;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #003399;
+}
+
+.closeoutline .ant-float-btn-default .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon {
+  color: #fff;
+}
+
+.ant-tooltip .ant-tooltip-inner {
+  background-color: #fff;
+  --antd-arrow-background-color: #fff;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  /* font-family: Open Sans; */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19x;
+  letter-spacing: 0em;
+}
+
+.ant-float-btn-default .ant-float-btn-body {
+  background-color: #003399;
+}
+
+.ant-float-btn-default .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon {
+  color: #fff;
+}
+
+.scroll-dash {
+  overflow: scroll;
+  height: 200px;
+  /* width: -webkit-fill-available; */
+}

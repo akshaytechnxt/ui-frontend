@@ -1,0 +1,266 @@
+.loan-app-card-header {
+    align-self: stretch;
+    border-bottom: 0.6px solid rgba(0, 51, 153, 0.24);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 16px;
+    gap: 16px;
+}
+
+.userinfo {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 18px;
+    color: #003399;
+}
+
+.button {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #003399;
+    box-shadow: 0px 2px 12px rgba(0, 51, 153, 0.32);
+    border: 1px solid #003399;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 22px;
+    max-width: 195px;
+    width: 100%;
+    color: #fff;
+    margin-left: auto;
+}
+
+.loan-app-card {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px;
+    gap: 16px;
+    /* max-width: 642px; */
+    text-align: center;
+    font-size: 16px;
+    color: #003399;
+}
+
+.header-info {
+    display: flex;
+}
+
+.avatar {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #003399;
+    text-align: center;
+    border-radius: 50%;
+    height: 50px;
+    background-color: rgba(0, 51, 153, 0.12);
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.username {
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #003399;
+    text-align: left;
+    display: inline-block;
+}
+
+.userid {
+    width: 100%;
+    position: relative;
+    font-size: 12px;
+    color: #777;
+    text-align: left;
+    display: inline-block;
+}
+
+.header-actions {
+    display: flex;
+    font-size: 25px;
+}
+
+/* .document-pending:hover{
+    color: #ff6b00;
+    border-color: #ff6b00;
+}
+.document-pending:active{    
+    color: #ff6b00;
+    border-color: #ff6b00;
+}  */
+.document-pending {
+    text-transform: capitalize;
+    border-radius: 16px;
+    /* background-color: rgba(255, 107, 0, 0.16); */
+    box-shadow: 0px 4px 6px rgba(255, 107, 0, 0.12);
+    /* border: 1px solid #ff6b00;
+color: #ff6b00; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    margin-right: 12px;
+}
+
+.application-info {
+    width: 100%;
+    display: flex;
+    text-align: start;
+
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title1 {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #444;
+    overflow: hidden;
+}
+
+.title2 {
+    font-size: 12px;
+
+    color: #737373;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.pagination-info {
+    font-size: 14px;
+    line-height: 18px;
+    color: #003399;
+}
+
+
+@media (max-width: 375px) {
+
+    .button {
+        max-width: 100%;
+    }
+
+    .application-info {
+        padding-top: 24px;
+    }
+
+    .pagination-info {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .application-info {
+        padding-top: 24px;
+    }
+
+    .button {
+        max-width: 100%;
+    }
+
+    .pagination-info {
+        display: none;
+
+    }
+
+    .pagination {
+        justify-content: end;
+    }
+}
+
+
+.emicards {
+    background: linear-gradient(0deg, #D2E1FF, #ffffff), linear-gradient(180deg, #FFFFFF 53.74%, rgba(210, 225, 255, 0.12) 160.42%);
+    border: 1px solid #D2E1FF;
+    box-shadow: 0px 2px 12px 0px #D2E1FF33;
+
+}
+
+.emiamount {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #003399;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9B959F;
+}
+
+.extrafees {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #444444;
+}
+
+.listingmenus {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #003399;
+
+}
+
+.btns .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+    background: #003399;
+}
+
+.btns .ant-btn-default:not(:disabled):not(.ant-btn-disabled):active {
+    background: #003399;
+}
+
+
+.ant-float-btn-default .ant-float-btn-body:hover {
+    background: #003399;
+}

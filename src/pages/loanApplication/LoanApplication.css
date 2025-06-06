@@ -1,0 +1,947 @@
+.custom-tabs-class .ant-tabs-top>.ant-tabs-nav {
+  margin: 0;
+}
+
+.tabspane {
+  width: 136px;
+  height: 46px;
+  padding: 12px 24px 12px 24px;
+  border-radius: 6px 6px 0px 0px;
+  border-right: 1px 1px 0px 1px;
+  margin-right: 2px;
+  gap: 8px;
+  color: #003399;
+
+}
+
+.tabber .ant-tabs-card>.ant-tabs-nav .ant-tabs-tab {
+  background: linear-gradient(0deg, #d2e1ff, #d2e1ff),
+    linear-gradient(180deg, #ffffff 0%, #d2e1ff 108.89%) !important;
+  color: #6688cd !important;
+}
+
+.full-width-content {
+  margin-bottom: 40px;
+  /* height: 1620px; */
+  /* overflow-y: auto; */
+  background-color: #fff;
+}
+
+/* .full-width-content::-webkit-scrollbar {
+    width: 0; 
+    height: 0;
+  } */
+
+.loancontainer {
+  /* display: flex;
+  flex-direction: column; */
+  /* min-height: auto !important; */
+  padding: 16px 26px;
+}
+
+/* 
+.basicdetailsform {
+  height: 1480px;
+}
+.existingloandetailsform {
+  height: 80vh;
+}
+.entitydetailsform {
+  height: 1020px;
+}
+.bankdetailform {
+  height: 400px;
+} */
+
+.loandetailstitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #003399;
+}
+
+.loandetail {
+  /* height: 290px; */
+  gap: 16px;
+}
+
+.loantitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #28b1ff;
+  /* padding-top: 32px; */
+  padding-bottom: 16px;
+}
+
+.currentprogress {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6d92d1;
+}
+
+.currentprogress-hide {
+  display: none;
+}
+
+.verifywrapperinfo {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.verificationwrapper {
+  display: flex;
+  flex-direction: row;
+  /* width: 38%; */
+  justify-content: flex-start;
+  align-content: center;
+  text-align: center;
+  gap: 6px;
+  border: 1px solid #003399;
+  color: #003399;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.verificationwrapper .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+  /* background: #003399; */
+  color: #fff;
+}
+
+.infowrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 44px; */
+  gap: 6px;
+  align-items: center;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.uploaded-image {
+  width: 60px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px;
+}
+
+.cardcol-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-align: left;
+
+  color: #444444;
+
+}
+
+.columnval {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #444444;
+}
+
+.upload-card .ant-card .ant-card-body {
+  padding: 12px;
+}
+
+.uploaddata {
+  width: 100%;
+}
+
+.filename {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  color: #003399;
+}
+
+.clicktoview {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #737373;
+}
+
+.uploadtextwrapper {
+  margin-right: 1rem;
+}
+
+.remove-icon {
+  /* width: 16px;
+  height: 16px; */
+  font-size: 16px;
+  color: #003399;
+  /* top: 4px;
+  left: 4px; */
+  border: 2px;
+}
+
+.shareverification {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #22bb33;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.infotitleverification {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #444444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .uploaddata .ant-btn {
+  width: 362px;
+  height: 55px;
+  text-align: left;
+  padding: 10px 16px 10px 16px;
+} */
+.uploaddata-mobile {
+  width: 100%;
+  height: 55px;
+  padding: 10px 16px 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  color: #003399;
+}
+
+.typeloan {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #444444;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.loaninfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 765px;
+  height: 44px;
+  padding: 6px 12px;
+  gap: 16px;
+}
+
+.emidetails {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #28b1ff;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #003399;
+}
+
+.emititle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9b959f;
+}
+
+.cancel {
+  width: 96px;
+  height: 42px;
+  padding: 10px 22px 10px 22px;
+  border-radius: 8px;
+  border: 1px;
+  gap: 8px;
+  color: #003399;
+  border: 1px solid #003399;
+  box-shadow: 0px 2px 12px 0px #00339929;
+}
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+  border-color: #003399;
+  background-color: #003399;
+}
+
+.savebtn {
+  width: 163px;
+  height: 42px;
+  padding: 10px 22px 10px 22px;
+  border-radius: 8px;
+  border: 1px;
+  gap: 8px;
+  background-color: #003399;
+  box-shadow: 0px 2px 12px 0px #00339952;
+  color: #fff;
+}
+
+.permanentaddress {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #28b1ff;
+}
+
+.locatemap {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #22bb33;
+  cursor: pointer;
+}
+
+.addcoapplicantbtn {
+  width: 165px;
+  height: 36px;
+  padding: 8px 14px 8px 14px;
+  border-radius: 6px;
+  border: 1px;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #003399;
+  border: 1px solid #003399;
+  box-shadow: 0px 2px 6px 0px #3b371e1f;
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+}
+
+.uploadbtn .ant-btn-icon {
+  font-size: 32px;
+  /* display: inline-flex; */
+  width: 36.44px;
+  height: 20px;
+}
+
+.uploaddata .ant-btn>span {
+  display: inline;
+}
+
+/* .uploaddata-mobile .ant-upload-wrapper .ant-upload-select {
+  display: block;
+} */
+.uploadbtn {
+  width: 100%;
+  height: 55px;
+  padding: 10px 16px 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: left;
+  color: #003399;
+}
+
+.lastsixmonthtext {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #9b959f;
+}
+
+.documentuploadtable .ant-table-thead>tr {
+  background-color: #d2e1ff;
+  /* width: 1284px; */
+  /* height: 35px; */
+  /* padding: 8px 24px 8px 24px; */
+  /* gap: 40px; */
+}
+
+.ant-table-wrapper .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>thead>tr>th {
+  border-inline-end: none;
+}
+
+.ant-table-wrapper .ant-table.ant-table-bordered>.ant-table-container>.ant-table-content>table>tbody>tr>td {
+  border-inline-end: none;
+}
+
+.filetypetitle {
+  font-size: 10px;
+  font-weight: 400;
+  /* line-height: 14px; */
+  letter-spacing: 0em;
+  text-align: left;
+  /* padding-left: 23px; */
+  color: #737373;
+}
+
+/* .verifytext{
+font-size: 14px;
+font-weight: 600;
+text-align: center;
+color: #22BB33;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+.ant-modal .ant-modal-title {
+  color: #003399 !important;
+  background: #ebeff7 !important;
+  padding: 10px !important;
+}
+
+.ant-modal .ant-modal-footer {
+  display: flex;
+  justify-content: end;
+  background: #fff;
+}
+
+/* .ant-modal-footer .ant-btn {
+  width: 178px;
+height: 42px;
+padding: 10px 22px 10px 22px;
+border-radius: 8px;
+border: 1px;
+gap: 8px;
+background-color: #003399;
+color: #fff;
+border: 1px solid #003399;
+box-shadow: 0px 2px 12px 0px #00339952;
+
+
+} */
+
+.ant-modal .ant-modal-close {
+  color: #003399 !important;
+  margin-top: -12px !important;
+}
+
+.input-text-verify {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #22bb33;
+  cursor: pointer;
+}
+
+.input-text-verify1 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  border: 1px solid darkgray;
+  border-radius: 15px;
+  opacity: 0.5;
+  color: darkgray;
+  background-color: #eeeeeee0;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.otpWrapper {
+  padding: 0px 24px;
+}
+
+.otpcibilwrapper {
+  /* width: 600px; */
+  /* height: 305px; */
+  /* padding: 0px 16px; */
+}
+
+.enterOtp .input-otp__field {
+  width: 100%;
+  height: 60px;
+  gap: 12px;
+  padding: 0px 12px;
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  max-width: 100px;
+}
+
+.enterOtp .input-otp {
+  justify-content: space-around;
+}
+
+.cibilotp .input-otp__field {
+  width: 82px;
+  height: 60px;
+  gap: 12px;
+  padding: 0px 12px;
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  max-width: 100px;
+}
+
+.cibilmodal .ant-modal .ant-modal-content {
+  width: 600px;
+}
+
+.otplabel .ant-form-item .ant-form-item-label>label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0px, 12px;
+  color: #003399;
+}
+
+.emailtextotp {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #444444;
+}
+
+.resendotp {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #28b1ff;
+  cursor: pointer;
+}
+
+.sixdigitotp {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #003399;
+}
+
+.resendText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #003399;
+}
+
+.success {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #0eb415;
+}
+
+.error {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: red;
+}
+
+.loansuccesstext {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #003399;
+}
+
+.eval {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+.estimatetime {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #9b959f;
+  margin-bottom: 16px;
+}
+
+.applicationlisting {
+  width: 248px;
+  height: 42px;
+  padding: 10px 22px 10px 22px;
+  border-radius: 8px;
+  border: 1px;
+  gap: 8px;
+  color: #fff;
+  background-color: #003399;
+  border: 1px solid #003399;
+  box-shadow: 0px 2px 12px 0px #00339952;
+}
+
+.uploadtable .ant-table-wrapper .ant-table-thead>tr>th {
+  width: 1284px;
+  height: 35px;
+  padding: 8px 24px 8px 24px;
+  gap: 40px;
+
+  background: #d2e1ff;
+}
+
+@media (max-width: 425px) {
+  .verifywrapperinfo {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+
+  }
+
+  .infowrapper {
+    width: 100%;
+  }
+
+  .verificationwrapper {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .uploadbtn {
+    width: 100%;
+  }
+}
+
+.okbtn {
+  padding-top: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #9B959F;
+  cursor: pointer;
+}
+
+.ant-upload-wrapper .ant-upload-select {
+  display: block;
+}
+
+.savebuttons .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+  background: #003399;
+  color: #fff;
+}
+
+.savebuttons .ant-btn-default:not(:disabled):not(.ant-btn-disabled):active {
+  background: #003399;
+  color: #fff;
+
+}
+
+.ant-col {
+  min-height: fit-content;
+}
+
+.uploadbtn .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+  background: #fff;
+}
+
+.uploadbtn .ant-btn-default:not(:disabled):not(.ant-btn-disabled):active {
+  background: #fff;
+}
+
+:where(.css-dev-only-do-not-override-1k979oh).ant-collapse>.ant-collapse-item {
+  border-bottom: 1px solid #6d92d1;
+}
+
+:where(.css-dev-only-do-not-override-1k979oh).ant-collapse .ant-collapse-content {
+  border-top: 1px solid #6d92d1
+}
+
+.div-container .ant-tabs-nav {
+  margin: 0% 3% !important;
+}
+
+@media (max-width: 575px) {
+  .document-table tr {
+    display: grid;
+  }
+
+  .document-table th {
+    display: none;
+  }
+
+  .document-verify-link {
+    display: grid !important;
+  }
+}
+
+.document-verify-link {
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  .upload-size {
+    width: 100% !important;
+  }
+}
+
+.upload-size {
+  width: 331px;
+}
+
+
+.tab-query .ant-tabs-content-holder {
+  background: white;
+  border: 1px solid #D2E1FF;
+}
+
+.tab-query .ant-tabs-nav {
+  margin: 0px !important;
+}
+
+.tab-query .ant-tabs-tab-active {
+  background: white !important;
+  border: 1px solid #D2E1FF;
+}
+
+:where(.css-dev-only-do-not-override-1drr2mu).ant-tabs-card>.ant-tabs-nav .ant-tabs-tab {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D2E1FF 108.89%);
+  border-top: 1px solid #D2E1FF;
+  border-left: 1px solid #D2E1FF;
+  border-right: 1px solid #D2E1FF;
+}
+
+:where(.css-dev-only-do-not-override-1drr2mu).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #003399;
+  font-weight: 500;
+}
+
+.ant-tabs-tab-btn {
+  color: #003399;
+  font-weight: 500;
+}
+
+/* 
+.uppercase-input::placeholder {
+  text-transform: none; 
+} */
+.ant-form-item-label>label.ant-form-item-required::before {
+  display: inline-block;
+  right: 0px;
+  position: absolute;
+}
+
+
+.ant-modal-body::-webkit-scrollbar {
+  display: none !important;
+}
+
+.ant-modal-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0px !important;
+  display: contents;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(153 131 131 / 30%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+:where(.css-dev-only-do-not-override-1drr2mu).ant-tabs-top>.ant-tabs-nav::before {
+  border-bottom: none !important;
+}
+
+.tab-query .ant-tabs-content-holder {
+  background: white;
+  border: 1px solid #D2E1FF;
+}
+
+.tab-query .ant-tabs-nav {
+  margin: 0px !important;
+}
+
+.tab-query .ant-tabs-tab-active {
+  background: white !important;
+  border: 1px solid #D2E1FF !important;
+}
+
+:where(.css-dev-only-do-not-override-1drr2mu).ant-tabs-card>.ant-tabs-nav .ant-tabs-tab {
+  /* background: linear-gradient(180deg, #FFFFFF 0%, #D2E1FF 108.89%) !important; */
+  border-top: 1px solid #D2E1FF !important;
+  border-left: 1px solid #D2E1FF !important;
+  border-right: 1px solid #D2E1FF !important;
+}
+
+:where(.css-dev-only-do-not-override-1drr2mu).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #003399;
+  font-weight: 500;
+}
+
+.ant-tabs-tab-btn {
+  color: #003399;
+  font-weight: 500;
+}
+
+:where(.css-dev-only-do-not-override-42nv3w).ant-tabs-card>.ant-tabs-nav .ant-tabs-tab {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D2E1FF 108.89%);
+  border-top: 1px solid #D2E1FF;
+  border-left: 1px solid #D2E1FF;
+  border-right: 1px solid #D2E1FF;
+}
+
+:where(.css-42nv3w).ant-tabs-card>.ant-tabs-nav .ant-tabs-tab,
+:where(.css-42nv3w).ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D2E1FF 108.89%);
+}
+
+.ant-input.panno::placeholder {
+  text-transform: none;
+  /* Override the uppercase transformation */
+}
+
+/* .panno{
+  text-transform: uppercase;
+} */
+
+
+.col-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col-wrapper .loandetailstitle {
+  /* Styles for the title */
+}
+
+.col-wrapper .applicant-documents {
+  width: 100%;
+  /* Default width for small screens */
+}
+
+/* Media query for screens wider than 768px */
+@media (min-width: 768px) {
+  .col-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .col-wrapper .applicant-documents {
+    width: 40%;
+  }
+
+  .col-wrapper .currentprogress-hide {
+    display: none;
+    /* Hide the progress on smaller screens */
+  }
+
+  .col-wrapper .currentprogress {
+    /* Styles for the current progress */
+  }
+}
+
+.col-wrapper .progress-container {
+  display: flex;
+  /* Default to flex display */
+}
+
+.col-wrapper .progress-container-hide {
+  display: none;
+  /* Hide progress container on smaller screens */
+}
+
+.ant-collapse-content .ant-collapse-content-active {
+  background-color: #D2E1FF;
+}
+
+.ant-collapse-content .ant-collapse-content-inactive .ant-collapse-content-hidden {
+  background-color: #fff;
+}
+
+.ant-collapse-header-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #003399;
+}
+
+.checkboxText {
+  color: #444444;
+  font-size: 16px;
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+
+.maps__modal__popup .ant-modal-footer {
+  display: flex !important;
+}
+
+.progressSuccess .ant-progress.ant-progress-status-success .ant-progress-text{
+  color: #003399;
+}
+
+.row-loan-summary{
+  text-transform: capitalize;
+}
+
+.upload-query-icon{
+  display: inline-block !important;
+}

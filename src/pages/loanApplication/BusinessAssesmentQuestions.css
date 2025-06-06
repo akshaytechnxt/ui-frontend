@@ -1,0 +1,26 @@
+.input-item{
+    padding: 12px 0 0 12px;
+}
+.card-shadow{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.horizontal-btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .horizontal-btns .ant-radio-button-wrapper {
+    flex: 1; 
+  }
+  .ant-radio-group-solid :where(.css-dev-only-do-not-override-1drr2mu).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    background-color: #28b1ff; 
+  }
+  .labletitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #003399;
+  }

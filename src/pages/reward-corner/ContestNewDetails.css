@@ -1,0 +1,48 @@
+@media (min-width: 600px) {
+    
+    .ContestDetailsTabs .ant-tabs-left >.ant-tabs-nav{
+        min-width: 200px;
+        background: #fff;
+    }
+    .ContestDetailsTabs .ant-tabs-left >.ant-tabs-content-holder{
+        border-left: none;
+    }
+    .ContestDetailsTabs .ant-tabs .ant-tabs-ink-bar{
+        left: 0;
+        border-left-color: #18478b;
+        background: #18478b;
+    }
+    .ContestDetailsTabs .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active{
+        background: #ecf2f9;
+        transition: ease 0.8s;
+        color: #fff;
+    }
+    .ContestDetailsTabs .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: #000000;
+        text-shadow: 0 0 0.25px currentcolor;
+        font-weight: 600;
+    }
+}
+
+    @media (max-width: 600px) {
+       /* .ContestDetailsTabs .ant-tabs-left {
+          position: top !important;
+        } */
+        .ContestDetailsTabs .ant-tabs .ant-tabs-tab+.ant-tabs-tab {
+            margin: 0 0 0 0px;
+        }
+        .ContestDetailsTabs .ant-tabs .ant-tabs-tab{
+            padding: 6px 10px;
+        }
+        .ContestDetailsTabs .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active{
+            background: #FFF;
+            color: #000;
+        }
+        .ContestDetailsTabs .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+            color: #000;
+        }
+        .ContestDetailsTabs .ant-tabs-top >.ant-tabs-nav .ant-tabs-ink-bar{
+            background: #18478b;
+            
+        }
+      }

@@ -1,0 +1,177 @@
+{
+    "errMsg": [
+    {
+    "_id": "62d50cf7a1a2f729f71f3fa5",
+    "showComment": false,
+    "leadId": null,
+    "partnerId": null,
+    "customerId": null,
+    "teamMember_clone": [ ],
+    "statusReason": "",
+    "isLeadFailed": false,
+    "bankCodeId": {
+    "_id": "60bf8b5f4bf8de6b61b4b05b",
+    "bankName": "AXIS",
+    "bankCode": "AXIS"
+    },
+    "branchCodeId": {
+    "_id": "628745ed53164c1166894892",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "bankCode": "AXIS",
+    "bankCodeId": "60bf8b5f4bf8de6b61b4b05b",
+    "solId": "897",
+    "branchName": "Ballia",
+    "branchCode": "AXIS897"
+    },
+    "cluster": "",
+    "circle": "Lucknow",
+    "region": "North 3",
+    "remarkHistory": [ ],
+    "manuallyrenewalCustomer": [ ],
+    "clientVisit": "",
+    "teamMember": [ ],
+    "manuallycustomerAdded": "false",
+    "statusType": "open",
+    "tata_appointment_type": "businesspalnrevie",
+    "durationType": "customedatetime",
+    "appointment_type": "existingpartner",
+    "start_time_MS": 1658147400000,
+    "end_time_MS": 1658151000000,
+    "start_time": 45000000,
+    "start_date": 1658102400000,
+    "userId": "60e5d6056b18e8309da3fa49",
+    "end_time": 48600000,
+    "end_date": 1658102400000,
+    "event_type": "appointment",
+    "event_name": "appointment",
+    "event_description": "Bhanyshree P will Lead visit Ballia (AXIS897) for Appointment",
+    "mode": "Lead visit",
+    "created_date": 1658129655764
+    },
+    {
+    "_id": "62d50ad0a1a2f729f71f3f9f",
+    "showComment": false,
+    "leadId": null,
+    "partnerId": null,
+    "customerId": null,
+    "teamMember_clone": [ ],
+    "statusReason": "Done withh meeting",
+    "isLeadFailed": false,
+    "bankCodeId": {
+    "_id": "60bf8b5f4bf8de6b61b4b05b",
+    "bankName": "AXIS",
+    "bankCode": "AXIS"
+    },
+    "branchCodeId": {
+    "_id": "628745ee53164c1166894a06",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "bankCode": "AXIS",
+    "bankCodeId": "60bf8b5f4bf8de6b61b4b05b",
+    "solId": "3868",
+    "branchName": "Obra",
+    "branchCode": "AXIS3868"
+    },
+    "cluster": "",
+    "circle": "Lucknow",
+    "region": "North 3",
+    "remarkHistory": [
+    {
+    "remark": "Done withh meeting",
+    "createdAt": 1658235558256
+    }
+    ],
+    "manuallyrenewalCustomer": [ ],
+    "clientVisit": "",
+    "teamMember": [ ],
+    "manuallycustomerAdded": "false",
+    "statusType": "close",
+    "tata_appointment_type": "jointcust",
+    "durationType": "allday",
+    "appointment_type": "existingpartner",
+    "start_time_MS": 1658307600000,
+    "end_time_MS": 1658336400000,
+    "start_time": 32400000,
+    "start_date": 1658275200000,
+    "userId": "60e5d6056b18e8309da3fa49",
+    "end_time": 1658275200000,
+    "end_date": 32400000,
+    "event_type": "appointment",
+    "event_name": "appointment",
+    "event_description": "Bhanyshree P will Branch visit Obra (AXIS3868) for Appointment",
+    "mode": "Branch visit",
+    "created_date": 1658129104714,
+    "advisorName": null,
+    "event_repeat_on_every": null,
+    "event_repeat_till_date": null,
+    "reminder_prority_color": null,
+    "set_reminder": null,
+    "updated_date": 1658235558233
+    },
+    {
+    "_id": "62d6aa86a1a2f729f71f400a",
+    "showComment": false,
+    "leadId": null,
+    "partnerId": null,
+    "customerId": null,
+    "teamMember_clone": [
+    "60edb0e28ac1941f0185b6c9"
+    ],
+    "statusReason": "need to update",
+    "isLeadFailed": false,
+    "bankCodeId": {
+    "_id": "60bf8b5f4bf8de6b61b4b05b",
+    "bankName": "AXIS",
+    "bankCode": "AXIS"
+    },
+    "branchCodeId": {
+    "_id": "628745ee53164c1166894987",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "bankCode": "AXIS",
+    "bankCodeId": "60bf8b5f4bf8de6b61b4b05b",
+    "solId": "2898",
+    "branchName": "Auraiya",
+    "branchCode": "AXIS2898"
+    },
+    "cluster": "",
+    "circle": "Lucknow",
+    "region": "North 3",
+    "remarkHistory": [
+    {
+    "remark": "need to update",
+    "createdAt": 1658235526255
+    }
+    ],
+    "manuallyrenewalCustomer": [ ],
+    "clientVisit": "",
+    "teamMember": [
+    {
+    "FullName": "otter j",
+    "ShortId": "",
+    "designation": "Area Sales Manager",
+    "_Id": "60edb0e28ac1941f0185b6c9"
+    }
+    ],
+    "manuallycustomerAdded": "false",
+    "statusType": "open",
+    "tata_appointment_type": "",
+    "durationType": "customedatetime",
+    "appointment_type": "existingpartner",
+    "start_time_MS": 1658417400000,
+    "end_time_MS": 1658421000000,
+    "start_time": 55800000,
+    "start_date": 1658361600000,
+    "userId": "60e5d6056b18e8309da3fa49",
+    "end_time": 59400000,
+    "end_date": 1658361600000,
+    "event_type": "training",
+    "event_name": "training",
+    "event_description": "Bhanyshree P will Telephonic Auraiya (AXIS2898) for Training with otter j",
+    "mode": "Telephonic",
+    "created_date": 1658235526255
+    }
+    ],
+    "dbDate": "Thu Aug 18 2022 08:47:58 GMT+0000 (Coordinated Universal Time)"
+    }

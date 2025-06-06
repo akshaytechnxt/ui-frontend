@@ -1,0 +1,59 @@
+.radio-btns{
+    padding: 12px 0 0 12px;
+}
+.card-shadow{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.horizontal-btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .horizontal-btns .ant-radio-button-wrapper {
+    flex: 1; 
+  }
+  .ant-radio-group-solid :where(.css-dev-only-do-not-override-1drr2mu).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    background-color: #28b1ff; 
+  }
+.vertical-radio-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.vertical-radio-group .ant-radio-button-wrapper {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+.ant-radio-button-inner{
+    font-size: 50px;
+}
+.vertical-radio-group .ant-radio-button-wrapper.ant-radio-button-wrapper-checked{
+    background-color: #28b1ff;
+}
+.ant-radio-group-large :where(.css-dev-only-do-not-override-1drr2mu).ant-radio-button-wrapper{
+    overflow: hidden;
+    word-wrap: break-word;
+    height: auto;
+    border: 1px solid #d9d9d9 !important;
+}
+.ant-radio-group-solid :where(.css-dev-only-do-not-override-1drr2mu).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    overflow: hidden;
+    word-wrap: break-word;
+    height: auto;
+    border: 1px solid #d9d9d9 !important; 
+}
+.ant-radio-group-large :where(.css-1ae8k9u).ant-radio-button-wrapper{
+    overflow: hidden;
+    word-wrap: break-word;
+    height: auto;
+}
+.labletitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #003399;
+  }
