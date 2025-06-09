@@ -751,7 +751,7 @@ const CreditxDashboard = () => {
             <Col xs={24} sm={24} md={12} lg={12} xl={12}>
               <div className="custom-activity-tracker">
                 <div className="tracker-header">
-                  <h3 className="section-title" style={{ margin: 0, paddingLeft: 0 }}>Activity Tracker</h3>
+                  <span className="section-title" style={{ margin: 0, paddingLeft: 0 }}>Activity Tracker</span>
                   <div className="date-navigator">
                     <div className="nav-button" onClick={() => setSelectedDate(moment(selectedDate).subtract(1, 'day'))}>
                       <LeftOutlined />
@@ -822,13 +822,12 @@ const CreditxDashboard = () => {
                     ) : (
                       <div className="no-data-container">
                         <Image preview={false} src={noData} className="no-data-image" />
-                        <Text className="no-data-text">No activities scheduled for today</Text>
                       </div>
                     )}
                   </div>
                 </Spin>
                 
-                <div style={{ textAlign: 'center', marginTop: '15px' }}>
+                <div style={{ textAlign: 'center', marginTop: '5px',marginBottom: '15px' }}>
                   <Button 
                     type="primary" 
                     icon={<PlusOutlined />}
