@@ -9,7 +9,7 @@ import Sdloader from "./components/Loader/FullPageLoader.js";
 const AppLayout = React.lazy(() => import("./layouts"));
 const TabsComp = React.lazy(() => import("./pages/tabs/Tabs"));
 const Login = React.lazy(() => import("./pages/loginPage/Login"));
-const CreditxDashboard = React.lazy(() => import("./pages/creditxDashboard/CreditxDashboard.js"));
+const CreditxDashboard = React.lazy(() => import("./pages/lmsDashboard/lmsDashboard.js"));
 const DisbursementView = React.lazy(() => import("./pages/loanApplication/disbursmentView.js"));
 const ProductCatalogue = React.lazy(() => import("./pages/Products/productCatalogue.js"));
 const DateScheduler = React.lazy(() => import("./components/ActivityTracker.js"))

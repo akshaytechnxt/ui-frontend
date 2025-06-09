@@ -61,7 +61,7 @@ import noteFav from "../../assets/image/note-favorite.png";
 import resource from "../../assets/image/task-square.png";
 import noData from "../../assets/image/nodataavailable.svg";
 import addSquare from "../../assets/image/add-square.png";
-import TodoListItem from "../creditxComponents/TodoListItem/TodoListItem";
+import TodoListItem from "../lwsComponents/TodoListItem/TodoListItem";
 import { resetProposalState } from "../../state/slices/proposalSlice";
 import { resetProposalAllState } from "../../state/slices/getAllProposalSlice";
 import { resetDocumentData } from "../../state/slices/applicantDetailsSlice";
@@ -70,7 +70,7 @@ import { setLoader } from "../../state/slices/loader";
 import NewApplication from "../reward-corner/NewApplication";
 import EmiCalculatorModal from "../reward-corner/EmiCalculatorModal";
 import Sdloader from "../../components/Loader/FullPageLoader";
-import "./creditxDashboard.css";
+import "./lmsDashboard.css";
 import "../loanApplication/LoanApplication.css";
 import mockUserService from "../../services/mockUserService";
 
