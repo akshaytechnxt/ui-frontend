@@ -208,7 +208,7 @@ function QueriesApprovals() {
                     </Col>
                     <Col xs={8} sm={8} md={3} lg={3} xl={3}>
                       <div
-                        style={{ color: "#003399", cursor: "pointer" }}
+                        style={{ color: "#68BA7F", cursor: "pointer" }}
                         onClick={() =>
                           navigate("/Application-Listing/Application", {
                             state: {
@@ -325,7 +325,7 @@ function QueriesApprovals() {
                   {item?.status === "resolved" ? <></> :
                     <Col xs={8} sm={8} md={3} lg={3} xl={3}>
                       <div
-                        style={{ color: "#003399", cursor: "pointer" }}
+                        style={{ color: "#68BA7F", cursor: "pointer" }}
                         onClick={() =>
                           navigate("/Application-Listing/Application", {
                             state: {

@@ -4,7 +4,7 @@
   padding-left: 5%;
   height: auto;
   width: 100%;
-  background-color: #003399;
+  background-color: #68BA7F;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
 }
 
@@ -140,7 +140,7 @@ td {
 
 .nested-table-head {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #003399;
+  background-color: #68BA7F;
   color: #fff;
 }
 
@@ -442,7 +442,7 @@ tr th {
   font-size: 15px;
   padding: 12px;
   border: 1px solid #D2E1FF;
-  color: #003399 !important;
+  color: #68BA7F !important;
   text-align: left;
   background-color: #D2E1FF !important;
 }
@@ -893,7 +893,7 @@ textarea {
 }
 
 .todo-header-style .ant-modal-close {
-  color: #003399;
+  color: #68BA7F;
 }
 
 .todoSearch .ant-input-group>.ant-input:first-child,
@@ -1361,7 +1361,7 @@ textarea {
 :where(.css-dev-only-do-not-override-1drr2mu).ant-table-wrapper .ant-table-thead>tr>th,
 :where(.css-dev-only-do-not-override-1drr2mu).ant-table-wrapper .ant-table-thead>tr>td {
   background: #D2E1FF !important;
-  color: #003399 !important;
+  color: #68BA7F !important;
 }
 
 :where(.css-dev-only-do-not-override-1drr2mu).ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before,
@@ -1380,7 +1380,7 @@ textarea {
 }
 
 .top_div .breadcrumb {
-  background-color: #003399;
+  background-color: #68BA7F;
 }
 
 .main_div {
@@ -1388,7 +1388,7 @@ textarea {
   height: 120px;
   color: white;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
-  background-color: #003399
+  background-color: #68BA7F
 }
 
 :where(.css-dev-only-do-not-override-1drr2mu).ant-breadcrumb .ant-breadcrumb-separator {
@@ -1422,7 +1422,7 @@ textarea {
 .top_div {
   height: 18px;
   color: white;
-  background-color: #003399;
+  background-color: #68BA7F;
 }
 
 .div_row {
@@ -1457,7 +1457,7 @@ textarea {
   display: flex;
   flex-direction: row;
   border: 1px solid white;
-  background: #003399;
+  background: #68BA7F;
   color: white;
   align-items: center;
   padding: 4px;
@@ -1527,12 +1527,12 @@ textarea {
 }
 
 :where(.css-dev-only-do-not-override-1drr2mu).ant-tabs .angt-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
 .ant-tabs-tab-btn {
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
@@ -1541,7 +1541,7 @@ textarea {
 }
 
 .active-save {
-  background-color: #003399;
+  background-color: #68BA7F;
   color: white;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%) !important
 }

@@ -162,7 +162,7 @@
 
 .notificationHead p {
   font-size: 16px;
-  color: #003399;
+  color: #68BA7F;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -196,7 +196,7 @@
   padding: 2px;
   width: 95px;
   align-items: center;
-  background-color: #003399;
+  background-color: #68BA7F;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -234,7 +234,7 @@
 }
 
 .list_data h4 {
-  color: #003399;
+  color: #68BA7F;
   font-size: 14px;
   font-weight: 700;
 }

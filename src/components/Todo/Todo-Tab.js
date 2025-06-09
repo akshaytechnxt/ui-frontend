@@ -436,13 +436,13 @@ const TodoTab = ({ button, isModalVisible, setIsModalVisible, recordData, onTodo
                                     <div style={{ width: "50%", display: "flex", flexDirection: "row" }}>
                                         <Button
                                             onClick={() => handleCancel()}
-                                            style={{ width: "50%", color: "#003399", marginRight: "10px", background: "white", border: "1px solid #003399" }}
+                                            style={{ width: "50%", color: "#68BA7F", marginRight: "10px", background: "white", border: "1px solid #68BA7F" }}
                                         >
                                             Cancel
                                         </Button>
                                         <Button
                                             htmlType="submit"
-                                            style={{ width: "50%", background: "#003399", color: "white" }}
+                                            style={{ width: "50%", background: "#68BA7F", color: "white" }}
                                         >
                                             Submit
                                         </Button>
@@ -679,13 +679,13 @@ const TodoTab = ({ button, isModalVisible, setIsModalVisible, recordData, onTodo
                             <div style={{ width: "50%", display: "flex", flexDirection: "row" }}>
                                 <Button
                                     onClick={() => handleCancel()}
-                                    style={{ width: "50%", color: "#003399", marginRight: "10px", background: "white", border: "1px solid #003399" }}
+                                    style={{ width: "50%", color: "#68BA7F", marginRight: "10px", background: "white", border: "1px solid #68BA7F" }}
                                 >
                                     Cancel
                                 </Button>
                                 <Button
                                     htmlType="submit"
-                                    style={{ width: "50%", background: "#003399", color: "white" }}
+                                    style={{ width: "50%", background: "#68BA7F", color: "white" }}
                                 >
                                     Submit
                                 </Button>

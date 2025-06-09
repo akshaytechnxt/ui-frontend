@@ -596,7 +596,7 @@ function CollectionView() {
                             </tr>
                           </tbody>
                         </table>
-                        <Button onClick={paymentCash} style={{ width: "100%", marginTop: 10, backgroundColor: "#003399", color: "white", border: "1px solid #003399", borderRadius: 6 }}>Submit</Button>
+                        <Button onClick={paymentCash} style={{ width: "100%", marginTop: 10, backgroundColor: "#68BA7F", color: "white", border: "1px solid #68BA7F", borderRadius: 6 }}>Submit</Button>
                       </>
                       :
                       paymentMode === "Cheque" ? <>
@@ -673,7 +673,7 @@ function CollectionView() {
                                   showUploadList={false}
                                   beforeUpload={() => false}
                                 >
-                                  <div style={{ color: "#003399" }}>Upload Cheque
+                                  <div style={{ color: "#68BA7F" }}>Upload Cheque
                                     <p className="filetypetitle">
                                       Only .pdf, .jpg allowed. File limit is 5MB
                                     </p>
@@ -683,7 +683,7 @@ function CollectionView() {
                             </Button>
                           </Form.Item>
                         </div>
-                        <Button onClick={paymentCheque} style={{ width: "100%", marginTop: 10, backgroundColor: "#003399", color: "white", border: "1px solid #003399", borderRadius: 6 }}>Submit</Button>
+                        <Button onClick={paymentCheque} style={{ width: "100%", marginTop: 10, backgroundColor: "#68BA7F", color: "white", border: "1px solid #68BA7F", borderRadius: 6 }}>Submit</Button>
                       </> : ""}
                   </Form>
                 </> :
@@ -691,21 +691,21 @@ function CollectionView() {
                     <div style={{ padding: 10 }}>
                       <div style={{ fontSize: 16, color: "#1dba1d", fontWeight: 500 }}>Online Payment Success !</div>
                       <br />
-                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#003399", gap: 10 }}>
+                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#68BA7F", gap: 10 }}>
                         <div>&#x2022; Payment Date</div>:<div>{dayjs(successPayment?.paymentDate).format("YYYY-MM-DD")}</div>
                       </div>
-                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#003399", gap: 10 }}>
+                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#68BA7F", gap: 10 }}>
                         <div>&#x2022; Payment Amount</div>:<div>{successPayment?.paymentAmount}/-</div>
                       </div>
-                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#003399", gap: 10 }}>
+                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#68BA7F", gap: 10 }}>
                         <div>&#x2022; Payment ID</div>:<div>{successPayment?.paymentId}</div>
                       </div>
-                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#003399", gap: 10 }}>
+                      <div style={{ display: "flex", flexDirection: "row", marginTop: 10, color: "#68BA7F", gap: 10 }}>
                         <div>&#x2022; Payment Method</div>:<div>{successPayment?.paymentMethod}</div>
                       </div>
                       <div style={{ display: "flex", flexDirection: "row", marginTop: 20, gap: 10 }}>
-                        <Button onClick={shareReceipt} style={{ color: "#003399", border: "1px solid #003399", borderRadius: 6 }}>Share Receipt</Button>
-                        <Button onClick={() => setPdfView(true)} style={{ backgroundColor: "#003399", color: "white", border: "1px solid #003399", borderRadius: 6 }}>View Receipt</Button>
+                        <Button onClick={shareReceipt} style={{ color: "#68BA7F", border: "1px solid #68BA7F", borderRadius: 6 }}>Share Receipt</Button>
+                        <Button onClick={() => setPdfView(true)} style={{ backgroundColor: "#68BA7F", color: "white", border: "1px solid #68BA7F", borderRadius: 6 }}>View Receipt</Button>
                       </div>
                     </div>
                   </>}

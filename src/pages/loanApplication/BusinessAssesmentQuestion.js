@@ -306,7 +306,7 @@ const BusinessAssessmentQuestions = ({ setProposalAssessment, form, proposalAsse
                             Current Progress
                         </div>
                         <div style={{ display: window.innerWidth >= 768 ? 'flex' : 'block' }}>
-                            <Progress percent={60} strokeColor="#003399" />
+                            <Progress percent={60} strokeColor="#68BA7F" />
                         </div>
                     </div>
                 </Col>

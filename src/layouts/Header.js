@@ -133,7 +133,7 @@ const Header = () => {
               >
                 <BellOutlined
                   onClick={showNotificationModal}
-                  style={{ fontSize: "25px", color: "#003399", cursor: "pointer" }}
+                  style={{ fontSize: "25px", color: "#68BA7F", cursor: "pointer" }}
                 />
                 {notifications.length > 0 && (
                   <span className="notification-count">{notifications.length}</span>
@@ -161,7 +161,7 @@ const Header = () => {
                   </div>
                   <div className="div">Employee ID: {data?.userData?.data?.data?.user?.empId}</div>
                 </div>
-                <DownOutlined className="chevron-down" style={{ color: "#003399" }} />
+                <DownOutlined className="chevron-down" style={{ color: "#68BA7F" }} />
               </div>
             </div>
           </div>

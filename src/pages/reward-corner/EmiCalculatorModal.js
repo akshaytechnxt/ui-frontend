@@ -132,8 +132,8 @@ const EmiCalculatorModal = ({
                 style={{
                   marginRight: "10px",
                   backgroundColor: "#fff",
-                  color: "#003399",
-                  border: "1px solid #003399",
+                  color: "#68BA7F",
+                  border: "1px solid #68BA7F",
                   borderRadius: "8px",
                   margin: "10px",
                   width: "96px",
@@ -151,10 +151,10 @@ const EmiCalculatorModal = ({
               </Button>
               <Button
                 style={{
-                  backgroundColor: "#003399",
+                  backgroundColor: "#68BA7F",
                   color: "#fff",
-                  border: "1px solid #003399",
-                  boxShadow: "0px 2px 12px 0px #00339952",
+                  border: "1px solid #68BA7F",
+                  boxShadow: "0px 2px 12px 0px #68BA7F52",
                   width: "150px",
                   height: "42px",
                   margin: "10px",
@@ -201,7 +201,7 @@ const EmiCalculatorModal = ({
                 series={[
                   {
                     data: [
-                      { id: 0, value: data?.principleLoanAmountPercent, color: "#003399",label:`${data?.principleLoanAmountPercent}%` },
+                      { id: 0, value: data?.principleLoanAmountPercent, color: "#68BA7F",label:`${data?.principleLoanAmountPercent}%` },
                       { id: 1, value: data?.totalInterestPercent, color: "#1FB02F",label:`${data?.totalInterestPercent}%` },
                     ],
                     cornerRadius: 3,
@@ -216,7 +216,7 @@ const EmiCalculatorModal = ({
               />
               <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 20, marginTop: 20 }}>
                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-                  <div style={{ backgroundColor: "#003399", width: 10, height: 10, marginRight: 5, borderRadius: 50 }} />
+                  <div style={{ backgroundColor: "#68BA7F", width: 10, height: 10, marginRight: 5, borderRadius: 50 }} />
                   <div style={{ inlineSize: "max-content" }}>Principal Loan Amount</div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
@@ -230,8 +230,8 @@ const EmiCalculatorModal = ({
             <Button
               style={{
                 backgroundColor: "#fff",
-                color: "#003399",
-                border: "1px solid #003399",
+                color: "#68BA7F",
+                border: "1px solid #68BA7F",
                 borderRadius: "8px",
                 width: "96px",
                 height: "42px",
@@ -249,10 +249,10 @@ const EmiCalculatorModal = ({
             </Button>
             <Button
               style={{
-                backgroundColor: "#003399",
+                backgroundColor: "#68BA7F",
                 color: "#fff",
-                border: "1px solid #003399",
-                boxShadow: "0px 2px 12px 0px #00339952",
+                border: "1px solid #68BA7F",
+                boxShadow: "0px 2px 12px 0px #68BA7F52",
                 width: "200px",
                 margin: "10px",
                 height: "42px",

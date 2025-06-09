@@ -277,7 +277,7 @@ const LoanApplication = () => {
 														showUploadList={false}
 														beforeUpload={() => false}
 													>
-														<div style={{ color: "#003399" }}>Upload Declaration Form
+														<div style={{ color: "#68BA7F" }}>Upload Declaration Form
 															<p className="filetypetitle">
 																Only .pdf, .jpg allowed. File limit is 5MB
 															</p>

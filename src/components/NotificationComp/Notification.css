@@ -2,7 +2,7 @@
     /* padding-top: 1vw; */
     font-size: 29px;
     font-weight: bold;
-    color: #003399;
+    color: #68BA7F;
     margin-left: 40px;
     margin-top: 20px;
   }
@@ -11,7 +11,7 @@
     width: 30px;
     height: 60px;
     border-radius: 50%;
-    background-color: #003399;
+    background-color: #68BA7F;
     /* position: absolute; */
     /* transform: translate(-50%, -50%); */
   }
@@ -23,7 +23,7 @@
 
   .notifyHead h4 {
     font-size: 18px;
-    color: #003399;
+    color: #68BA7F;
     margin-bottom: 30px;
     font-weight: 700;
     bottom: 20px;
@@ -37,7 +37,7 @@
   .steps {
     width: 20px;
     height: 25px;
-    background-color: #003399;
+    background-color: #68BA7F;
     border: 2px solid #FFFFFF;
     border-radius: 50%;
   }
@@ -48,7 +48,7 @@
   }
 
   .list_data1 h4 {
-    color: #003399;
+    color: #68BA7F;
     font-size: 14px;
     font-weight: 700;
   }

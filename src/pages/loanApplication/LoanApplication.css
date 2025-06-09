@@ -10,7 +10,7 @@
   border-right: 1px 1px 0px 1px;
   margin-right: 2px;
   gap: 8px;
-  color: #003399;
+  color: #68BA7F;
 
 }
 
@@ -59,7 +59,7 @@
   line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .loandetail {
@@ -106,14 +106,14 @@
   align-content: center;
   text-align: center;
   gap: 6px;
-  border: 1px solid #003399;
-  color: #003399;
+  border: 1px solid #68BA7F;
+  color: #68BA7F;
   font-weight: 500;
   border-radius: 8px;
 }
 
 .verificationwrapper .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
-  /* background: #003399; */
+  /* background: #68BA7F; */
   color: #fff;
 }
 
@@ -169,7 +169,7 @@
   line-height: 19px;
   letter-spacing: 0.15000000596046448px;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .clicktoview {
@@ -189,7 +189,7 @@
   /* width: 16px;
   height: 16px; */
   font-size: 16px;
-  color: #003399;
+  color: #68BA7F;
   /* top: 4px;
   left: 4px; */
   border: 2px;
@@ -236,7 +236,7 @@
   line-height: 19px;
   letter-spacing: 0.15000000596046448px;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .typeloan {
@@ -276,7 +276,7 @@
   line-height: 33px;
   letter-spacing: 0.5px;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .emititle {
@@ -295,14 +295,14 @@
   border-radius: 8px;
   border: 1px;
   gap: 8px;
-  color: #003399;
-  border: 1px solid #003399;
-  box-shadow: 0px 2px 12px 0px #00339929;
+  color: #68BA7F;
+  border: 1px solid #68BA7F;
+  box-shadow: 0px 2px 12px 0px #68BA7F29;
 }
 
 .ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
-  border-color: #003399;
-  background-color: #003399;
+  border-color: #4A9A5F;
+  background-color: #4A9A5F;
 }
 
 .savebtn {
@@ -312,8 +312,8 @@
   border-radius: 8px;
   border: 1px;
   gap: 8px;
-  background-color: #003399;
-  box-shadow: 0px 2px 12px 0px #00339952;
+  background-color: #68BA7F;
+  box-shadow: 0px 2px 12px 0px #68BA7F52;
   color: #fff;
 }
 
@@ -344,8 +344,8 @@
   border: 1px;
   gap: 8px;
   background-color: #ffffff;
-  color: #003399;
-  border: 1px solid #003399;
+  color: #68BA7F;
+  border: 1px solid #68BA7F;
   box-shadow: 0px 2px 6px 0px #3b371e1f;
   display: flex;
   justify-content: center;
@@ -377,7 +377,7 @@
   line-height: 19px;
   letter-spacing: 0.15000000596046448px;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .lastsixmonthtext {
@@ -427,7 +427,7 @@ justify-content: center;
 align-items: center;
 } */
 .ant-modal .ant-modal-title {
-  color: #003399 !important;
+  color: #68BA7F !important;
   background: #ebeff7 !important;
   padding: 10px !important;
 }
@@ -445,16 +445,16 @@ padding: 10px 22px 10px 22px;
 border-radius: 8px;
 border: 1px;
 gap: 8px;
-background-color: #003399;
+background-color: #68BA7F;
 color: #fff;
-border: 1px solid #003399;
-box-shadow: 0px 2px 12px 0px #00339952;
+border: 1px solid #68BA7F;
+box-shadow: 0px 2px 12px 0px #68BA7F52;
 
 
 } */
 
 .ant-modal .ant-modal-close {
-  color: #003399 !important;
+  color: #68BA7F !important;
   margin-top: -12px !important;
 }
 
@@ -528,7 +528,7 @@ box-shadow: 0px 2px 12px 0px #00339952;
   letter-spacing: 0em;
   text-align: left;
   padding: 0px, 12px;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .emailtextotp {
@@ -556,7 +556,7 @@ box-shadow: 0px 2px 12px 0px #00339952;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .resendText {
@@ -565,7 +565,7 @@ box-shadow: 0px 2px 12px 0px #00339952;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .success {
@@ -592,7 +592,7 @@ box-shadow: 0px 2px 12px 0px #00339952;
   line-height: 20px;
   letter-spacing: 0px;
   text-align: center;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .eval {
@@ -623,9 +623,9 @@ box-shadow: 0px 2px 12px 0px #00339952;
   border: 1px;
   gap: 8px;
   color: #fff;
-  background-color: #003399;
-  border: 1px solid #003399;
-  box-shadow: 0px 2px 12px 0px #00339952;
+  background-color: #68BA7F;
+  border: 1px solid #68BA7F;
+  box-shadow: 0px 2px 12px 0px #68BA7F52;
 }
 
 .uploadtable .ant-table-wrapper .ant-table-thead>tr>th {
@@ -675,12 +675,12 @@ box-shadow: 0px 2px 12px 0px #00339952;
 }
 
 .savebuttons .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
-  background: #003399;
+  background: #68BA7F;
   color: #fff;
 }
 
 .savebuttons .ant-btn-default:not(:disabled):not(.ant-btn-disabled):active {
-  background: #003399;
+  background: #68BA7F;
   color: #fff;
 
 }
@@ -760,12 +760,12 @@ box-shadow: 0px 2px 12px 0px #00339952;
 }
 
 :where(.css-dev-only-do-not-override-1drr2mu).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
 .ant-tabs-tab-btn {
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
@@ -828,12 +828,12 @@ box-shadow: 0px 2px 12px 0px #00339952;
 }
 
 :where(.css-dev-only-do-not-override-1drr2mu).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
 .ant-tabs-tab-btn {
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
@@ -919,7 +919,7 @@ box-shadow: 0px 2px 12px 0px #00339952;
   line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
-  color: #003399;
+  color: #68BA7F;
 }
 
 .checkboxText {
@@ -935,7 +935,7 @@ box-shadow: 0px 2px 12px 0px #00339952;
 }
 
 .progressSuccess .ant-progress.ant-progress-status-success .ant-progress-text{
-  color: #003399;
+  color: #68BA7F;
 }
 
 .row-loan-summary{

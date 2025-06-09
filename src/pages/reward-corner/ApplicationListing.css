@@ -19,15 +19,15 @@
     justify-content: flex-start;
     text-align: left;
     font-size: 18px;
-    color: #003399;
+    color: #68BA7F;
 }
 
 .button {
     flex: 1;
     border-radius: 8px;
-    background-color: #003399;
+    background-color: #68BA7F;
     box-shadow: 0px 2px 12px rgba(0, 51, 153, 0.32);
-    border: 1px solid #003399;
+    border: 1px solid #68BA7F;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -58,7 +58,7 @@
     /* max-width: 642px; */
     text-align: center;
     font-size: 16px;
-    color: #003399;
+    color: #68BA7F;
 }
 
 .header-info {
@@ -69,7 +69,7 @@
     font-size: 16px;
     text-transform: capitalize;
     font-weight: 600;
-    color: #003399;
+    color: #68BA7F;
     text-align: center;
     border-radius: 50%;
     height: 50px;
@@ -88,7 +88,7 @@
     font-size: 18px;
     text-transform: capitalize;
     font-weight: 600;
-    color: #003399;
+    color: #68BA7F;
     text-align: left;
     display: inline-block;
 }
@@ -169,7 +169,7 @@ color: #ff6b00; */
 .pagination-info {
     font-size: 14px;
     line-height: 18px;
-    color: #003399;
+    color: #68BA7F;
 }
 
 
@@ -221,7 +221,7 @@ color: #ff6b00; */
     line-height: 33px;
     letter-spacing: 0.5px;
     text-align: left;
-    color: #003399;
+    color: #68BA7F;
 }
 
 .label {
@@ -248,19 +248,19 @@ color: #ff6b00; */
     line-height: 19px;
     letter-spacing: 0em;
     text-align: left;
-    color: #003399;
+    color: #68BA7F;
 
 }
 
 .btns .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
-    background: #003399;
+    background: #68BA7F;
 }
 
 .btns .ant-btn-default:not(:disabled):not(.ant-btn-disabled):active {
-    background: #003399;
+    background: #68BA7F;
 }
 
 
 .ant-float-btn-default .ant-float-btn-body:hover {
-    background: #003399;
+    background: #68BA7F;
 }

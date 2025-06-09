@@ -68,7 +68,7 @@ const LoanDetails = ({ form }) => {
         <div className="applicant-documents">
           <div className="currentprogress">Current Progress</div>
           <div className="progress-container">
-            <Progress percent={10} strokeColor="#003399" />
+            <Progress percent={10} strokeColor="#68BA7F" />
           </div>
         </div>
       </Col>

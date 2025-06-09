@@ -166,7 +166,7 @@ const MasterContest = () => {
         onClick={() => handleMenuItemClick(item, 'Calculate EMI')}
         className="listingmenus"
       >
-        <CalculatorOutlined style={{ fontSize: "20px", color: "#003399" }} />{" "}
+        <CalculatorOutlined style={{ fontSize: "20px", color: "#68BA7F" }} />{" "}
         Calculate EMI
       </Menu.Item>
       <Menu.Item
@@ -174,7 +174,7 @@ const MasterContest = () => {
         onClick={() => deleteClick(item)}
         className="listingmenus"
       >
-        <DeleteOutlined style={{ fontSize: "20px", color: "#003399" }} />{" "}
+        <DeleteOutlined style={{ fontSize: "20px", color: "#68BA7F" }} />{" "}
         Delete Application
       </Menu.Item>
     </Menu>

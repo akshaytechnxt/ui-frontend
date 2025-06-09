@@ -191,12 +191,12 @@ function ViewDetails() {
                     <Col style={{ color: "#82888e", fontSize: 13 }} xl={10} sm={10} md={10} lg={10} xs={10}>
                       Agreement Document
                     </Col>
-                    <Col onClick={shareAgreement1} style={{ color: "#003399", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
+                    <Col onClick={shareAgreement1} style={{ color: "#68BA7F", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
                       <ShareAltOutlined />Share With Customer
                     </Col>
 
                     {showDownload === true ? <>
-                      <Col onClick={downloadAgreement1} style={{ color: "#003399", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
+                      <Col onClick={downloadAgreement1} style={{ color: "#68BA7F", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
                         <EyeOutlined />View and Download
                       </Col>
                     </> : ""}
@@ -232,10 +232,10 @@ function ViewDetails() {
                     <Col style={{ color: "#82888e", fontSize: 13 }} xl={10} sm={10} md={10} lg={10} xs={10}>
                       Loan Amortisation Document
                     </Col>
-                    <Col onClick={shareAgreement} style={{ color: "#003399", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
+                    <Col onClick={shareAgreement} style={{ color: "#68BA7F", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
                       <ShareAltOutlined />Share With Customer
                     </Col>
-                    <Col onClick={downloadAgreement} style={{ color: "#003399", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
+                    <Col onClick={downloadAgreement} style={{ color: "#68BA7F", fontWeight: 500, fontSize: 15, cursor: "pointer" }} xl={7} sm={7} md={7} lg={7} xs={7}>
                       <EyeOutlined />  View and Download
                     </Col>
                   </Row>

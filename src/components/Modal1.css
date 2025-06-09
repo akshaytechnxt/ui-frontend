@@ -101,7 +101,7 @@
 .notificationHead button {
   background: none;
   border: none;
-  color: #003399;
+  color: #68BA7F;
   cursor: pointer;
 }
 
@@ -166,7 +166,7 @@
 }
 
 .view_button button {
-  background: #003399;
+  background: #68BA7F;
   color: white;
   border: none;
   padding: 8px 20px;

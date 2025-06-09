@@ -7,7 +7,7 @@ const Footer = () => {
         textAlign: "center",
         background: "#E0E7F3",
         padding: "0 16px",
-        color: "#003399",        
+        color: "#68BA7F",        
       }}
     >
       Powered by iorta Technology<sup>TM</sup>

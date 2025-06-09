@@ -145,8 +145,8 @@ const Datescheduler = () => {
 				{...restProps}
 				style={{
 					...style,
-					backgroundColor: restProps?.data?.mode == "Phone Call" ? "#C9DAFD" : restProps?.data?.mode == "In-Person Meeting" ? "#28B1FF" : "#003399",
-					color: restProps?.data?.mode == "Phone Call" ? "#003399" : restProps?.data?.mode == "In-Person Meeting" ? "white" : "white",
+					backgroundColor: restProps?.data?.mode == "Phone Call" ? "#C9DAFD" : restProps?.data?.mode == "In-Person Meeting" ? "#28B1FF" : "#68BA7F",
+					color: restProps?.data?.mode == "Phone Call" ? "#68BA7F" : restProps?.data?.mode == "In-Person Meeting" ? "white" : "white",
 					borderRadius: '8px',
 					textAlign: "center",
 					display: "flex",
@@ -177,7 +177,7 @@ const Datescheduler = () => {
 					</div>
 					<div style={{ height: 15, width: 1, backgroundColor: 'grey' }}></div>
 					<div style={{ display: 'flex', width: "50px", cursor: "pointer", justifyContent: 'center' }} onClick={() => showModal(restProps?.appointmentData)}>
-						<EditOutlined style={{ fontSize: 14, color: "#003399" }} />
+						<EditOutlined style={{ fontSize: 14, color: "#68BA7F" }} />
 					</div>
 					<div style={{ height: 15, width: 1, backgroundColor: 'grey' }}></div>
 					<div style={{ display: 'flex', width: "50px", cursor: "pointer", justifyContent: 'center' }} onClick={() => { setAppointmentTootip(!appointmentTootip) }}>
@@ -188,7 +188,7 @@ const Datescheduler = () => {
 				<br />
 				<Row style={{ textAlign: "center" }}>
 					<Col xl={12} sm={24} xs={24} md={12} lg={12}>
-						<div style={{ color: "#003399", fontSize: 16, fontWeight: 500 }}>
+						<div style={{ color: "#68BA7F", fontSize: 16, fontWeight: 500 }}>
 							Location
 						</div>
 						<div style={{ fontSize: 14 }}>
@@ -196,7 +196,7 @@ const Datescheduler = () => {
 						</div>
 					</Col>
 					<Col xl={12} sm={24} xs={24} md={12} lg={12}>
-						<div style={{ color: "#003399", fontSize: 16, fontWeight: 500 }}>
+						<div style={{ color: "#68BA7F", fontSize: 16, fontWeight: 500 }}>
 							Mode
 						</div>
 						<div style={{ fontSize: 14 }}>
@@ -206,7 +206,7 @@ const Datescheduler = () => {
 				</Row>
 				<Row style={{ textAlign: "center", marginTop: 20 }}>
 					<Col xl={12} sm={24} xs={24} md={12} lg={12}>
-						<div style={{ color: "#003399", fontSize: 16, fontWeight: 500 }}>
+						<div style={{ color: "#68BA7F", fontSize: 16, fontWeight: 500 }}>
 							Meeting Location
 						</div>
 						<div style={{ fontSize: 14 }}>
@@ -214,7 +214,7 @@ const Datescheduler = () => {
 						</div>
 					</Col>
 					<Col xl={12} sm={24} xs={24} md={12} lg={12}>
-						<div style={{ color: "#003399", fontSize: 16, fontWeight: 500 }}>
+						<div style={{ color: "#68BA7F", fontSize: 16, fontWeight: 500 }}>
 							Duration
 						</div>
 						<div style={{ fontSize: 14 }}>

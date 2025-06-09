@@ -913,7 +913,7 @@ const DocumentUpload = ({ id, applicantId, status, setStatus }) => {
         <div className="applicant-documents">
           <div className="currentprogress">Current Progress</div>
           <div className="progress-container progressSuccess">
-            <Progress percent={100} format={() => "100%"} strokeColor="#003399" />
+            <Progress percent={100} format={() => "100%"} strokeColor="#68BA7F" />
           </div>
         </div>
       </Col>

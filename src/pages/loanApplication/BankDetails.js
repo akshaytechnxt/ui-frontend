@@ -127,7 +127,7 @@ const BankDetails = ({ form, bankDetails, setBankDetails, id, document }) => {
         <div className="applicant-documents">
           <div className="currentprogress">Current Progress</div>
           <div className="progress-container">
-            <Progress percent={80} strokeColor="#003399" />
+            <Progress percent={80} strokeColor="#68BA7F" />
           </div>
         </div>
       </Col>
@@ -404,7 +404,7 @@ const BankDetails = ({ form, bankDetails, setBankDetails, id, document }) => {
                 display: "flex",
                 alignItems: "center"
               }} xs={24} sm={24} md={12} lg={8} xl={8}>
-                <Button onClick={checkEmandate} style={{ backgroundColor: "#003399", color: "white" }}>Check mandate availability with Bank</Button>
+                <Button onClick={checkEmandate} style={{ backgroundColor: "#68BA7F", color: "white" }}>Check mandate availability with Bank</Button>
               </Col>
 
               {emandateOption !== "" ? <>

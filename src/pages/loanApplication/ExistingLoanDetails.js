@@ -375,7 +375,7 @@ const ExistingLoanDetails = ({
           <div className="applicant-documents">
             <div className="currentprogress">Current Progress</div>
             <div className="progress-container">
-              <Progress percent={40} strokeColor="#003399" />
+              <Progress percent={40} strokeColor="#68BA7F" />
             </div>
           </div>
         </Col>
@@ -1016,7 +1016,7 @@ const ExistingLoanDetails = ({
         </Collapse>
         <div style={{ display: "flex", justifyContent: "center", margin: 30 }}>
           <Button
-            style={{ border: "1px solid #003399", color: "#003399" }}
+            style={{ border: "1px solid #68BA7F", color: "#68BA7F" }}
             onClick={addPanel}
           >
             + Add Existing Merchant Details
@@ -1093,8 +1093,8 @@ const ExistingLoanDetails = ({
             <Button
               style={{
                 backgroundColor: "#fff",
-                color: "#003399",
-                border: "1px solid #003399",
+                color: "#68BA7F",
+                border: "1px solid #68BA7F",
                 borderRadius: "8px",
                 width: "96px",
                 height: "42px",
@@ -1106,10 +1106,10 @@ const ExistingLoanDetails = ({
             </Button>
             <Button
               style={{
-                backgroundColor: "#003399",
+                backgroundColor: "#68BA7F",
                 color: "#fff",
-                border: "1px solid #003399",
-                boxShadow: "0px 2px 12px 0px #00339952",
+                border: "1px solid #68BA7F",
+                boxShadow: "0px 2px 12px 0px #68BA7F52",
                 width: "118px",
                 height: "42px",
                 padding: "10px 22px 10px 22px",

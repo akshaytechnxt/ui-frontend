@@ -1,10 +1,58 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Form, Image, Spin, FloatButton } from "antd";
+import { 
+  Row, 
+  Col, 
+  Form, 
+  Image, 
+  Spin, 
+  FloatButton, 
+  Card, 
+  Typography, 
+  Tag, 
+  Statistic, 
+  Progress, 
+  List, 
+  Avatar, 
+  Checkbox, 
+  Button, 
+  Tabs,
+  Calendar,
+  Badge,
+  Tooltip,
+  Divider,
+  Select
+} from "antd";
+import { BarChart } from '@mui/x-charts/BarChart';
+import { LineChart } from '@mui/x-charts/LineChart';
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import moment from "moment";
-import { LeftOutlined, RightOutlined, PlusOutlined, CalculatorOutlined, CalendarOutlined } from "@ant-design/icons";
-import SdWidgetCom from "../widget/SdWidgetCom";
+import { 
+  LeftOutlined, 
+  RightOutlined, 
+  PlusOutlined, 
+  CalculatorOutlined, 
+  CalendarOutlined,
+  ClockCircleOutlined,
+  FileTextOutlined,
+  TeamOutlined,
+  UserOutlined,
+  DollarOutlined,
+  ApartmentOutlined,
+  ArrowUpOutlined,
+  ArrowDownOutlined,
+  BarsOutlined,
+  CheckOutlined,
+  FileSearchOutlined,
+  BarChartOutlined,
+  LineChartOutlined,
+  PieChartOutlined,
+  CheckCircleOutlined,
+  CloseCircleOutlined,
+  ExclamationCircleOutlined,
+  MailOutlined,
+  PhoneOutlined
+} from "@ant-design/icons";
 import note from "../../assets/image/note.png";
 import size from "../../assets/image/size.png";
 import questions from "../../assets/image/message-question.png";
@@ -26,6 +74,9 @@ import "./creditxDashboard.css";
 import "../loanApplication/LoanApplication.css";
 import mockUserService from "../../services/mockUserService";
 
+const { Title, Text } = Typography;
+const { TabPane } = Tabs;
+
 const CreditxDashboard = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
@@ -36,14 +87,19 @@ const CreditxDashboard = () => {
   const [date, setDate] = useState("");
   const [logintime, setLogintime] = useState("");
   
-  // Initialize with mock data
-  const [countData, setCountData] = useState({
-    disbursed: 5,
+  // Lead counts data
+  const [leadCounts, setLeadCounts] = useState({
+    newLeads: 15,
     inProgress: 8,
+    approved: 6,
+    disbursed: 5,
     rejected: 3,
     sanctioned: 4,
+    pending: 9,
+    closed: 7
   });
   
+  // Collection counts data
   const [collectionCount, setCollectionCount] = useState({
     count: {
       Active: 12,
@@ -72,51 +128,171 @@ const CreditxDashboard = () => {
     ]
   });
   
-  const [queryCount, setQueryCount] = useState({
-    pending: 6,
-    resolved: 15
-  });
-
-  const [totalCount, setTotalCount] = useState(20);
-  const [dropdownData, setDropdownData] = useState("7");
-  const [pendingQueriesList, setPendingQueriesList] = useState([
+  // Queries and approvals data
+  const [queriesList, setQueriesList] = useState([
     {
+      id: "Q001",
       proposalId: "PROP004",
       description: "Additional documents required for income proof",
       status: "Pending",
-      date: "2024-03-10"
+      date: "2024-03-10",
+      priority: "High"
     },
     {
+      id: "Q002",
       proposalId: "PROP005",
       description: "Bank statement verification pending",
       status: "Pending",
-      date: "2024-03-11"
+      date: "2024-03-11",
+      priority: "Medium"
     },
     {
+      id: "Q003",
       proposalId: "PROP006",
       description: "Property documents need verification",
       status: "Pending",
-      date: "2024-03-12"
+      date: "2024-03-12",
+      priority: "Low"
     }
   ]);
-  const [activityResponse, setActivityResponse] = useState([
+  
+  const [approvalsList, setApprovalsList] = useState([
     {
+      id: "A001",
+      proposalId: "PROP007",
+      description: "Loan application #L123456 needs final approval",
+      status: "Pending",
+      date: "2024-03-13",
+      customer: "John Doe"
+    },
+    {
+      id: "A002",
+      proposalId: "PROP008",
+      description: "Credit line increase for customer John Doe",
+      status: "Pending",
+      date: "2024-03-14",
+      customer: "Sarah Smith"
+    },
+    {
+      id: "A003",
+      proposalId: "PROP009",
+      description: "EMI restructuring for customer Sarah Smith",
+      status: "Pending",
+      date: "2024-03-15",
+      customer: "Michael Johnson"
+    }
+  ]);
+  
+  // Activity tracker data
+  const [activities, setActivities] = useState([
+    {
+      id: 1,
       agenda: "Loan Disbursement Meeting",
       meetingStartTime: "10:00 AM",
       meetingEndTime: "11:00 AM",
+      date: "2024-03-20",
       mode: "Online",
       location: "Virtual",
       meetingLocation: "Zoom"
     },
     {
+      id: 2,
       agenda: "Document Verification",
       meetingStartTime: "02:00 PM",
       meetingEndTime: "03:00 PM",
+      date: "2024-03-20",
       mode: "Offline",
       location: "Branch",
       meetingLocation: "Main Branch"
+    },
+    {
+      id: 3,
+      agenda: "Client Meeting - XYZ Corp",
+      meetingStartTime: "11:00 AM",
+      meetingEndTime: "12:00 PM",
+      date: "2024-03-21",
+      mode: "Online",
+      location: "Virtual",
+      meetingLocation: "Google Meet"
     }
   ]);
+  
+  // Todo tasks data
+  const [todoTasks, setTodoTasks] = useState([
+    {
+      id: 1,
+      description: "Follow up with John Doe regarding loan application",
+      priority: "High",
+      targetDate: "2024-03-20",
+      completed: false
+    },
+    {
+      id: 2,
+      description: "Review credit report for Jane Smith",
+      priority: "Medium",
+      targetDate: "2024-03-21",
+      completed: false
+    },
+    {
+      id: 3,
+      description: "Prepare proposal for corporate client XYZ Ltd",
+      priority: "High",
+      targetDate: "2024-03-22",
+      completed: false
+    },
+    {
+      id: 4,
+      description: "Update customer database with new information",
+      priority: "Low",
+      targetDate: "2024-03-23",
+      completed: false
+    }
+  ]);
+  
+  // Product list data
+  const [productList, setProductList] = useState([
+    {
+      id: 1,
+      name: "Personal Loan",
+      interestRate: "10.5%",
+      maxAmount: "₹10,00,000",
+      tenure: "Up to 5 years",
+      icon: <UserOutlined />
+    },
+    {
+      id: 2,
+      name: "Business Loan",
+      interestRate: "12.0%",
+      maxAmount: "₹50,00,000",
+      tenure: "Up to 7 years",
+      icon: <ApartmentOutlined />
+    },
+    {
+      id: 3,
+      name: "Home Loan",
+      interestRate: "8.5%",
+      maxAmount: "₹1,00,00,000",
+      tenure: "Up to 20 years",
+      icon: <HomeOutlined />
+    }
+  ]);
+  
+  // Performance metrics data
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    conversionRate: 68,
+    processingTime: 3.2,
+    monthlyTarget: 84,
+    satisfaction: 4.7,
+    history: {
+      months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      conversionRate: [55, 60, 62, 65, 67, 68],
+      processingTime: [4.8, 4.5, 4.0, 3.6, 3.4, 3.2],
+      monthlyTarget: [60, 65, 70, 75, 80, 84],
+      satisfaction: [4.2, 4.3, 4.4, 4.5, 4.6, 4.7]
+    }
+  });
+
+  const [selectedDate, setSelectedDate] = useState(moment());
   const [activityLoader, setActivityLoader] = useState(false);
   const [isEmiModalVisible, setIsEmiModalVisible] = useState(false);
   const [isNewApplicationModalVisible, setIsNewApplicationModalVisible] = useState(false);
@@ -126,17 +302,7 @@ const CreditxDashboard = () => {
   const [checkEligibility, setCheckEligibility] = useState(false);
   const [showSuccessPage, setShowSuccessPage] = useState(false);
   const [showErrorPage, setShowErrorPage] = useState(false);
-
-  const [demoApplication, setDemoApplication] = useState({
-    id: "DEMO001",
-    name: "John Doe",
-    amount: "₹5,00,000",
-    purpose: "Home Renovation",
-    status: "In Progress",
-    currentStep: "Basic Details",
-    nextStep: "Merchant Details",
-    lastUpdated: "2024-03-12"
-  });
+  const [selectedChart, setSelectedChart] = useState('conversion');
 
   useEffect(() => {
     dispatch(resetProposalState());
@@ -144,12 +310,6 @@ const CreditxDashboard = () => {
     dispatch(resetDocumentData());
     dispatch(resetEntityDocumentData());
   }, []);
-
-  const [startDate, setStartDate] = useState(moment().startOf("week"));
-  const [selectedDate, setSelectedDate] = useState(moment());
-  const [selectedNewDate, setSelectedNewDate] = useState(
-    moment().format("YYYY-MM-DD")
-  );
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -183,17 +343,8 @@ const CreditxDashboard = () => {
     }
   }, [data]);
 
-  const handleNextWeek = () => {
-    setStartDate(moment(startDate).add(1, "week"));
-  };
-
-  const handlePrevWeek = () => {
-    setStartDate(moment(startDate).subtract(1, "week"));
-  };
-
-  const handleDayClick = (day) => {
-    setSelectedDate(day?._d);
-    setSelectedNewDate(moment(day?._d).format("YYYY-MM-DD"));
+  const handleCalendarSelect = (date) => {
+    setSelectedDate(date);
   };
 
   const handleEmiCalculatorClick = () => {
@@ -223,652 +374,819 @@ const CreditxDashboard = () => {
     return "Good Evening";
   };
 
-  const daysOfWeek = [];
-  for (let i = 0; i < 7; i++) {
-    const day = moment(startDate).startOf("week").add(i, "days");
-    daysOfWeek.push(day);
-  }
+  const handleTodoCheckboxChange = (id) => {
+    setTodoTasks(prevTasks => 
+      prevTasks.map(task => 
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
 
-  const handleDemoUpdate = () => {
-    const steps = [
-      { current: "Basic Details", next: "Merchant Details" },
-      { current: "Merchant Details", next: "Income Details" },
-      { current: "Income Details", next: "Employment Details" },
-      { current: "Employment Details", next: "Bank Details" },
-      { current: "Bank Details", next: "Document Upload" },
-      { current: "Document Upload", next: "Review & Submit" }
-    ];
+  const getPriorityColor = (priority) => {
+    switch (priority) {
+      case 'High': return '#E34234';
+      case 'Medium': return '#FF8A00';
+      case 'Low': return '#68BA7F';
+      default: return '#68BA7F';
+    }
+  };
 
-    const currentIndex = steps.findIndex(step => step.current === demoApplication.currentStep);
-    const nextIndex = (currentIndex + 1) % steps.length;
+  // Calendar dateCellRender function to show activities on calendar dates
+  const dateCellRender = (value) => {
+    const date = value.format('YYYY-MM-DD');
+    const dateActivities = activities.filter(activity => 
+      moment(activity.date).format('YYYY-MM-DD') === date
+    );
 
-    setDemoApplication(prev => ({
-      ...prev,
-      currentStep: steps[nextIndex].current,
-      nextStep: steps[nextIndex].next,
-      lastUpdated: new Date().toISOString().split('T')[0]
-    }));
+    return (
+      <ul className="calendar-event-list">
+        {dateActivities.map(activity => (
+          <li key={activity.id}>
+            <Badge color="#68BA7F" text={activity.agenda} />
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  // Get today's activities for the activity tracker
+  const getTodayActivities = () => {
+    const today = selectedDate.format('YYYY-MM-DD');
+    return activities.filter(activity => 
+      moment(activity.date).format('YYYY-MM-DD') === today
+    );
+  };
+
+  const handleNewLeadsClick = () => {
+    navigate("/Application-Listing", { state: "inProgress" });
+  };
+  
+  const handleInProgressClick = () => {
+    navigate("/Application-Listing", { state: "inProgress" });
+  };
+  
+  const handleApprovedClick = () => {
+    navigate("/Application-Listing", { state: "sanctioned" });
+  };
+  
+  const handleDisbursedClick = () => {
+    navigate("/Application-Listing", { state: "disbursed" });
   };
 
   return (
     <>
       {loading && <Sdloader sdloader={loading} />}
-      <div className="top_header_dashboard">
-        <div className="main_container">
-          <div className="wrapper_text">
-            <div className="greeting">{getGreeting(currentTimeInSeconds)}</div>
-            <div className="user">
-              <div>{data?.userData?.data?.data?.user?.firstName}</div>&nbsp;
-              <div>{data?.userData?.data?.data?.user?.lastName}</div>
+      
+      {/* Dashboard Header */}
+      <div className="dashboard-header">
+        <div className="container">
+          <div className="header-content">
+            <div className="header-left">
+              <div className="greeting">{getGreeting(currentTimeInSeconds)}</div>
+              <div className="user-name">
+                <span>{data?.userData?.data?.data?.user?.firstName}</span>&nbsp;
+                <span>{data?.userData?.data?.data?.user?.lastName}</span>
+              </div>
+              <div className="login-details">
+                Last Login: {date} | {logintime}
+              </div>
             </div>
-            <div style={{ display: "flex" }} className="login_details">
-              Last Login : {date} | {logintime}
-              <div style={{ marginLeft: 5 }}></div>
+            <div className="header-right">
+              <Button 
+                type="primary" 
+                icon={<PlusOutlined />} 
+                size="middle"
+                onClick={handleNewApplicationClick}
+                className="new-application-btn"
+              >
+                New Application
+              </Button>
             </div>
           </div>
         </div>
       </div>
-      <div className="main_content_dashboard">
-        <div className="main_container">
-          <Row
-            className="widget_row"
-            gutter={[16, { xs: 16, sm: 16, md: 16, lg: 16 }]}
-            justify={"center"}
-          >
-            <Col className="col_widget">
-              <SdWidgetCom
-                headeColor={"#003399"}
-                backgroundColorToDo={"#fff"}
-                title_header="Application"
-                count={totalCount}
-                headerImgSrc={note}
-                toRoute="/Application-Listing"
-              >
-                <div
-                  className="claims_body hScroll "
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "18px",
-                  }}
-                >
-                  <div className="row w-100 text-center text-primary">
-                    <div className="claim_count col border-right">
-                      <div onClick={() => navigate("/Application-Listing", { state: "inProgress" })} className="number_count">
-                        {countData?.inProgress}
-                      </div>
-                      <div>In Progress</div>
-                    </div>
-                    <div className="claim_count col">
-                      <div onClick={() => navigate("/Application-Listing", { state: "sanctioned" })} className="number_count">
-                        {countData?.sanctioned}
-                      </div>
-                      <div>Sanctioned</div>
-                    </div>
+      
+      <div className="dashboard-content">
+        <div className="container">
+          {/* FIRST ROW - Lead Count Cards */}
+          <Row gutter={[16, 16]} className="dashboard-row">
+            <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Card className="stat-card new-leads-card" bordered={false} onClick={handleNewLeadsClick}>
+                <div className="stat-card-content">
+                  <div className="stat-card-icon">
+                    <FileTextOutlined />
                   </div>
-                  <div className="row w-100 text-center text-primary">
-                    <div className="claim_count col border-right">
-                      <div onClick={() => navigate("/Application-Listing", { state: "disbursed" })} className="number_count">
-                        {countData?.disbursed}
+                  <div className="stat-card-info">
+                    <Text className="stat-card-title">New Leads</Text>
+                    <Title level={2} className="stat-card-value">{leadCounts.newLeads}</Title>
+                    <Tag color="#68BA7F" className="stat-card-tag">
+                      <ArrowUpOutlined /> 18% this week
+                    </Tag>
+                  </div>
+                </div>
+                <div className="stat-card-footer">
+                  <div className="stat-footer-info">
+                    <div className="footer-label">Last 24h</div>
+                    <div className="footer-value">+3</div>
+                  </div>
+                  <Progress percent={75} showInfo={false} strokeWidth={4} strokeColor="#68BA7F" />
+                </div>
+              </Card>
+            </Col>
+            <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Card className="stat-card in-progress-card" bordered={false} onClick={handleInProgressClick}>
+                <div className="stat-card-content">
+                  <div className="stat-card-icon">
+                    <ClockCircleOutlined />
+                  </div>
+                  <div className="stat-card-info">
+                    <Text className="stat-card-title">In Progress</Text>
+                    <Title level={2} className="stat-card-value">{leadCounts.inProgress}</Title>
+                    <Tag color="#28B1FF" className="stat-card-tag">
+                      <ArrowUpOutlined /> 5% this week
+                    </Tag>
+                  </div>
+                </div>
+                <div className="stat-card-footer">
+                  <div className="stat-footer-info">
+                    <div className="footer-label">Most in step</div>
+                    <div className="footer-value">Verification</div>
+                  </div>
+                  <Progress percent={45} showInfo={false} strokeWidth={4} strokeColor="#28B1FF" />
+                </div>
+              </Card>
+            </Col>
+            <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Card className="stat-card approved-card" bordered={false} onClick={handleApprovedClick}>
+                <div className="stat-card-content">
+                  <div className="stat-card-icon">
+                    <CheckCircleOutlined />
+                  </div>
+                  <div className="stat-card-info">
+                    <Text className="stat-card-title">Approved</Text>
+                    <Title level={2} className="stat-card-value">{leadCounts.approved}</Title>
+                    <Tag color="#FF8A00" className="stat-card-tag">
+                      <ArrowUpOutlined /> 12% this week
+                    </Tag>
+                  </div>
+                </div>
+                <div className="stat-card-footer">
+                  <div className="stat-footer-info">
+                    <div className="footer-label">Avg. amount</div>
+                    <div className="footer-value">₹5.2L</div>
+                  </div>
+                  <Progress percent={65} showInfo={false} strokeWidth={4} strokeColor="#FF8A00" />
+                </div>
+              </Card>
+            </Col>
+            <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Card className="stat-card disbursed-card" bordered={false} onClick={handleDisbursedClick}>
+                <div className="stat-card-content">
+                  <div className="stat-card-icon">
+                    <DollarOutlined />
+                  </div>
+                  <div className="stat-card-info">
+                    <Text className="stat-card-title">Disbursed</Text>
+                    <Title level={2} className="stat-card-value">{leadCounts.disbursed}</Title>
+                    <Tag color="#E34234" className="stat-card-tag">
+                      <ArrowUpOutlined /> 8% this week
+                    </Tag>
+                  </div>
+                </div>
+                <div className="stat-card-footer">
+                  <div className="stat-footer-info">
+                    <div className="footer-label">Total amount</div>
+                    <div className="footer-value">₹24.5L</div>
+                  </div>
+                  <Progress percent={40} showInfo={false} strokeWidth={4} strokeColor="#E34234" />
+                </div>
+              </Card>
+            </Col>
+          </Row>
+
+          {/* SECOND ROW - Performance and Activity Tracker */}
+          <Row gutter={[16, 16]} className="dashboard-row">
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+              <Card 
+                title={
+                  <div className="card-title">
+                    <BarChartOutlined className="card-title-icon" />
+                    <span>Performance Dashboard</span>
+                  </div>
+                } 
+                extra={
+                  <Select 
+                    defaultValue="conversion" 
+                    size="small" 
+                    style={{ width: 140 }}
+                    onChange={(value) => setSelectedChart(value)}
+                  >
+                    <Select.Option value="conversion">Conversion Rate</Select.Option>
+                    <Select.Option value="processing">Processing Time</Select.Option>
+                    <Select.Option value="target">Monthly Target</Select.Option>
+                    <Select.Option value="satisfaction">Satisfaction</Select.Option>
+                  </Select>
+                }
+                className="dashboard-card performance-card"
+              >
+                <div className="performance-charts">
+                  {selectedChart === 'conversion' && (
+                    <div className="chart-container">
+                      <div className="chart-metrics">
+                        <div className="chart-metric-value">{performanceMetrics.conversionRate}%</div>
+                        <div className="chart-metric-trend">
+                          <ArrowUpOutlined style={{ color: '#68BA7F' }} />
+                          <span>+5.2% from last month</span>
+                        </div>
                       </div>
-                      <div>Disbursed</div>
+                      <LineChart
+                        height={230}
+                        series={[
+                          {
+                            data: performanceMetrics.history.conversionRate,
+                            color: '#68BA7F',
+                            label: 'Conversion Rate (%)',
+                            showMark: true,
+                            area: true,
+                            curve: "monotoneX",
+                          },
+                        ]}
+                        xAxis={[{
+                          data: performanceMetrics.history.months,
+                          scaleType: 'band',
+                        }]}
+                        sx={{
+                          '.MuiLineElement-root': {
+                            strokeWidth: 2,
+                          },
+                          '.MuiMarkElement-root': {
+                            stroke: '#fff',
+                            scale: '0.6',
+                            fill: '#68BA7F',
+                            strokeWidth: 2,
+                          },
+                        }}
+                        margin={{ top: 10, bottom: 30, left: 20, right: 10 }}
+                      />
                     </div>
-                    <div className="claim_count col">
-                      <div onClick={() => navigate("/Application-Listing", { state: "rejected" })} className="number_count">
-                        {countData?.rejected}
+                  )}
+                  
+                  {selectedChart === 'processing' && (
+                    <div className="chart-container">
+                      <div className="chart-metrics">
+                        <div className="chart-metric-value">{performanceMetrics.processingTime} days</div>
+                        <div className="chart-metric-trend">
+                          <ArrowDownOutlined style={{ color: '#68BA7F' }} />
+                          <span>-0.5 days from last month</span>
+                        </div>
                       </div>
-                      <div>Rejected</div>
+                      <LineChart
+                        height={230}
+                        series={[
+                          {
+                            data: performanceMetrics.history.processingTime,
+                            color: '#28B1FF',
+                            label: 'Processing Time (days)',
+                            showMark: true,
+                            area: true,
+                            curve: "monotoneX",
+                          },
+                        ]}
+                        xAxis={[{
+                          data: performanceMetrics.history.months,
+                          scaleType: 'band',
+                        }]}
+                        sx={{
+                          '.MuiLineElement-root': {
+                            strokeWidth: 2,
+                          },
+                          '.MuiMarkElement-root': {
+                            stroke: '#fff',
+                            scale: '0.6',
+                            fill: '#28B1FF',
+                            strokeWidth: 2,
+                          },
+                        }}
+                        margin={{ top: 10, bottom: 30, left: 20, right: 10 }}
+                      />
+                    </div>
+                  )}
+                  
+                  {selectedChart === 'target' && (
+                    <div className="chart-container">
+                      <div className="chart-metrics">
+                        <div className="chart-metric-value">{performanceMetrics.monthlyTarget}%</div>
+                        <div className="chart-metric-trend">
+                          <ArrowUpOutlined style={{ color: '#68BA7F' }} />
+                          <span>+12% progress</span>
+                        </div>
+                      </div>
+                      <BarChart
+                        height={230}
+                        series={[
+                          {
+                            data: performanceMetrics.history.monthlyTarget,
+                            color: '#FF8A00',
+                            label: 'Monthly Target (%)',
+                            valueFormatter: (value) => `${value}%`,
+                          },
+                        ]}
+                        xAxis={[{
+                          data: performanceMetrics.history.months,
+                          scaleType: 'band',
+                        }]}
+                        sx={{
+                          '.MuiBarElement-root': {
+                            borderRadius: 4,
+                          }
+                        }}
+                        margin={{ top: 10, bottom: 30, left: 20, right: 10 }}
+                      />
+                    </div>
+                  )}
+                  
+                  {selectedChart === 'satisfaction' && (
+                    <div className="chart-container">
+                      <div className="chart-metrics">
+                        <div className="chart-metric-value">{performanceMetrics.satisfaction}/5</div>
+                        <div className="chart-metric-trend">
+                          <ArrowUpOutlined style={{ color: '#68BA7F' }} />
+                          <span>+0.2 from last month</span>
+                        </div>
+                      </div>
+                      <LineChart
+                        height={230}
+                        series={[
+                          {
+                            data: performanceMetrics.history.satisfaction,
+                            color: '#8E44AD',
+                            label: 'Satisfaction (out of 5)',
+                            showMark: true,
+                            area: true,
+                            curve: "monotoneX",
+                          },
+                        ]}
+                        xAxis={[{
+                          data: performanceMetrics.history.months,
+                          scaleType: 'band',
+                        }]}
+                        sx={{
+                          '.MuiLineElement-root': {
+                            strokeWidth: 2,
+                          },
+                          '.MuiMarkElement-root': {
+                            stroke: '#fff',
+                            scale: '0.6',
+                            fill: '#8E44AD',
+                            strokeWidth: 2,
+                          },
+                        }}
+                        margin={{ top: 10, bottom: 30, left: 20, right: 10 }}
+                      />
+                    </div>
+                  )}
+                </div>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+              <div className="custom-activity-tracker">
+                <div className="tracker-header">
+                  <h3 className="section-title" style={{ margin: 0, paddingLeft: 0 }}>Activity Tracker</h3>
+                  <div className="date-navigator">
+                    <div className="nav-button" onClick={() => setSelectedDate(moment(selectedDate).subtract(1, 'day'))}>
+                      <LeftOutlined />
+                    </div>
+                    <div className="date-display">{selectedDate.format('MMM DD, YYYY')}</div>
+                    <div className="nav-button" onClick={() => setSelectedDate(moment(selectedDate).add(1, 'day'))}>
+                      <RightOutlined />
                     </div>
                   </div>
                 </div>
-              </SdWidgetCom>
-            </Col>
-            <Col className="col_widget">
-              <SdWidgetCom
-                dropdownData={dropdownData}
-                setDropdownData={setDropdownData}
-                backgroundColorToDo={"#fff"}
-                headeColor={"#003399"}
-                title_header="Collection"
-                headerImgSrc={size}
-                toRoute="/Collection-Listing"
-                dropdownValue={true}
-              >
-                <div
-                  className="claims_body hScroll query_card"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "12px",
-                  }}
-                >
-                  <Row className="row w-100 text-center text-primary">
-                    <Col onClick={() => navigate("/Collection-Listing", { state: "active" })} span={8} className="claim_count border-right">
-                      <div className="number_count">{collectionCount?.count?.Active || 0}</div>
-                      <div style={{ color: "#003399" }}>Active</div>
-                    </Col>
-                    <Col onClick={() => navigate("/Collection-Listing", { state: "upcoming" })} span={8} className="claim_count border-right">
-                      <div className="number_count1">{collectionCount?.count?.Upcoming || 0}</div>
-                      <div style={{ color: "#FF8A00" }}>Upcoming</div>
-                    </Col>
-                    <Col onClick={() => navigate("/Collection-Listing", { state: "overdue" })} span={8} className="claim_count">
-                      <div className="number_count2">{collectionCount?.count?.Overdue || 0}</div>
-                      <div style={{ color: "#E34234" }}>Overdue</div>
-                    </Col>
-                  </Row>
-                  <div className="scroll-dash">
-                    {collectionCount?.data?.length > 0 ? (
-                      collectionCount?.data?.map((item, index) => (
-                        <div key={index} className="list_item_wrap">
-                          <div className="list_item border-bottom">
-                            <div className="list_text">
-                              {item?.message}
+                
+                <div className="time-slots">
+                  {[...Array(7)].map((_, index) => {
+                    const date = moment().add(index - 3, 'days');
+                    const isActive = date.format('YYYY-MM-DD') === selectedDate.format('YYYY-MM-DD');
+                    const dayEvents = activities.filter(activity => 
+                      moment(activity.date).format('YYYY-MM-DD') === date.format('YYYY-MM-DD')
+                    );
+                    
+                    return (
+                      <div 
+                        key={index} 
+                        className={`time-slot ${isActive ? 'active' : ''}`}
+                        onClick={() => setSelectedDate(date)}
+                      >
+                        <div className="slot-day">{date.format('ddd')}</div>
+                        <div className="slot-date">{date.format('DD')}</div>
+                        {dayEvents.length > 0 && (
+                          <div className="slot-events">{dayEvents.length} {dayEvents.length === 1 ? 'event' : 'events'}</div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+                
+                <Spin spinning={activityLoader}>
+                  <div className="activities-timeline">
+                    {getTodayActivities().length > 0 ? (
+                      getTodayActivities().map((activity, index) => (
+                        <div className="timeline-item" key={activity.id}>
+                          <div className="timeline-marker">
+                            {activity.mode === 'Online' ? <TeamOutlined /> : <UserOutlined />}
+                          </div>
+                          <div className="timeline-content">
+                            <div className="timeline-title">
+                              {activity.agenda}
+                              <div className="timeline-time">
+                                {activity.meetingStartTime} - {activity.meetingEndTime}
+                              </div>
                             </div>
-                            <button onClick={() => navigate("/Collection-Listing/CollectionView", { state: item?.proposalId })} className="view_button">VIEW</button>
+                            <div className="timeline-details">
+                              <div className="timeline-detail">
+                                <div className="detail-name">Mode</div>
+                                <div className="detail-value">{activity.mode}</div>
+                              </div>
+                              <div className="timeline-detail">
+                                <div className="detail-name">Location</div>
+                                <div className="detail-value">{activity.location}</div>
+                              </div>
+                              <div className="timeline-detail">
+                                <div className="detail-name">Meeting Location</div>
+                                <div className="detail-value">{activity.meetingLocation}</div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       ))
                     ) : (
-                      <div style={{padding:"20%",display:"flex",justifyContent:"center"}}>
-                        <Image preview={false} src={noData}/>
+                      <div className="no-data-container">
+                        <Image preview={false} src={noData} className="no-data-image" />
+                        <Text className="no-data-text">No activities scheduled for today</Text>
                       </div>
                     )}
                   </div>
-                  <div className="view_all">
-                    <button onClick={() => navigate("/Collection-Listing")} className="view_all_button">VIEW ALL</button>
-                  </div>
+                </Spin>
+                
+                <div style={{ textAlign: 'center', marginTop: '15px' }}>
+                  <Button 
+                    type="primary" 
+                    icon={<PlusOutlined />}
+                    size="small"
+                    onClick={() => navigate("/Calendar")}
+                    style={{ 
+                      backgroundColor: 'var(--primary-color)', 
+                      borderColor: 'var(--primary-color)',
+                      boxShadow: '0 3px 8px rgba(104, 186, 127, 0.2)',
+                      borderRadius: '6px',
+                      fontWeight: 600
+                    }}
+                  >
+                    Add Activity
+                  </Button>
                 </div>
-              </SdWidgetCom>
+              </div>
             </Col>
-            <Col className="col_widget">
-              <SdWidgetCom
-                backgroundColorToDo={"#fff"}
-                headeColor={"#003399"}
-                title_header={"Queries & Approvals"}
-                headerImgSrc={questions}
-                toRoute="/queries-approvals"
-              >
-                <div
-                  className="claims_body hScroll query_card"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "8px",
-                  }}
-                >
-                  <Row className="row w-100 text-center text-primary">
-                    <Col span={12} className="claim_count border-right" onClick={() => navigate("/queries-approvals", { state: "Pending Queries" })}>
-                      <div className="number_count">{queryCount?.pending}</div>
-                      <div>Pending</div>
-                    </Col>
-                    <Col span={12} className="claim_count" onClick={() => navigate("/queries-approvals", { state: "Pending Approvals" })}>
-                      <div className="number_count">{queryCount?.resolved}</div>
-                      <div>Resolved</div>
-                    </Col>
-                  </Row>
-                  <div className="scroll-dash">
-                    {pendingQueriesList?.length > 0 ? (
-                      pendingQueriesList?.map((item, index) => (
-                        <div key={index} className="list_item_wrap">
-                          <div className="list_item border-bottom">
-                            <div className="list_text">
-                              {item?.description}
-                            </div>
-                            <button onClick={() => navigate("/Application-Listing/Application", { state: { isPendingQueryList: true, proposalId: item?.proposalId } })} className="view_button">VIEW</button>
-                          </div>
-                        </div>
-                      ))
-                    ) : (
-                      <div style={{padding:"20%",display:"flex",justifyContent:"center"}}>
-                        <Image preview={false} src={noData}/>
-                      </div>
-                    )}
+          </Row>
+
+          {/* THIRD ROW - Queries and Approvals */}
+          <Row gutter={[16, 16]} className="dashboard-row">
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+              <Card 
+                title={
+                  <div className="card-title">
+                    <FileSearchOutlined className="card-title-icon" />
+                    <span>Pending Queries</span>
                   </div>
-                  <div className="view_all">
-                    <button onClick={() => navigate("/queries-approvals")} className="view_all_button">VIEW ALL</button>
-                  </div>
-                </div>
-              </SdWidgetCom>
-            </Col>
-            <Col className="col_widget">
-              <SdWidgetCom
-                backgroundColorToDo={"#fff"}
-                headeColor={"#003399"}
-                title_header={"To Do"}
-                headerImgSrc={tasksquare}
-                toRoute="/Todo"
+                } 
+                extra={<a href="#" onClick={() => navigate("/queries-approvals", { state: "Pending Queries" })}>View All</a>}
+                className="dashboard-card queries-card"
+                bordered={false}
               >
-                <div
-                  className="claims_body hScroll to_do_card"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "8px",
-                  }}
-                >
-                  <div className="todo_list_item_wrap">
-                    <TodoListItem />
+                <div className="card-stats">
+                  <div className="card-stat-item">
+                    <div className="stat-count">{queriesList.length}</div>
+                    <div className="stat-label">Total Queries</div>
                   </div>
-                </div>
-              </SdWidgetCom>
-            </Col>
-            <Col className="col_widget">
-              <SdWidgetCom
-                backgroundColorToDo={"#fff"}
-                headeColor={"#003399"}
-                title_header={"Activity Tracker"}
-                headerImgSrc={noteFav}
-                toRoute="/Calendar"
-              >
-                <div
-                  className="claims_body hScroll activity_tracker_card"
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "8px",
-                  }}
-                >
-                  <div className="calendor_wrapper">
-                    <div className="week_selector_wrapper d-flex justify-content-between align-items-center">
-                      <div
-                        onClick={handlePrevWeek}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <LeftOutlined
-                          style={{
-                            width: 24,
-                            height: 24,
-                            color: "#003399",
-                            fontSize: 24,
-                          }}
-                        />
-                      </div>
-                      <div className="weeks">
-                        {startDate.format("MMM YY")}
-                      </div>
-                      <div
-                        onClick={handleNextWeek}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <RightOutlined
-                          style={{
-                            width: 24,
-                            height: 24,
-                            color: "#003399",
-                            fontSize: 24,
-                          }}
-                        />
-                      </div>
+                  <div className="card-stat-item">
+                    <div className="stat-count" style={{ color: 'var(--primary-color)' }}>
+                      {queriesList.filter(q => q.priority === 'High').length}
                     </div>
-                    <div className="weekdays d-flex justify-content-between">
-                      {daysOfWeek.map((day) => (
-                        <div
-                          key={day.format("YYYY-MM-DD")}
-                          className={`${selectedDate &&
-                            moment(selectedDate).isSame(day, "day")
-                            ? "active_day"
-                            : "days"
-                            }`}
-                          onClick={() => handleDayClick(day)}
+                    <div className="stat-label">High Priority</div>
+                  </div>
+                  <div className="card-stat-item">
+                    <div className="stat-count" style={{ color: 'var(--accent-color)' }}>2</div>
+                    <div className="stat-label">Due Today</div>
+                  </div>
+                </div>
+                <List
+                  className="queries-list"
+                  itemLayout="horizontal"
+                  dataSource={queriesList}
+                  renderItem={item => (
+                    <List.Item
+                      actions={[
+                        <Button 
+                          type="primary" 
+                          size="small"
+                          onClick={() => navigate("/Application-Listing/Application", { state: { isPendingQueryList: true, proposalId: item.proposalId } })}
+                          className="view-button"
                         >
-                          <div className="day">{day.format("ddd")}</div>
-                          <div className="date">{day.format("DD")}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <Spin className="spin-width" size="large" spinning={activityLoader}>
-                    {activityResponse?.length > 0 ? (
-                      <div className="activity_card_list_items">
-                        {activityResponse?.map((item, index) => (
-                          <div
-                            key={index}
-                            className="appointment_card_item"
-                          >
-                            <div className="appointment_card_header">
-                              <div className="title">
-                                <CalendarOutlined
-                                  style={{
-                                    color: "#003399",
-                                    fontSize: 16,
-                                  }}
-                                />
-                                <span className="title_text">
-                                  {item?.agenda}
-                                </span>
-                              </div>
-                              <div className="appointment_time">
-                                {item?.meetingStartTime}-
-                                {item?.meetingEndTime}
-                              </div>
-                            </div>
-                            <Row style={{ textAlign: "center",width:"100%" }}>
-                              <Col xl={8} md={8} lg={8} sm={8} xs={8}>
-                                <div
-                                  style={{
-                                    fontSize: 12,
-                                    color: "#003399",
-                                    fontWeight: "bolder",
-                                  }}
-                                >
-                                  Mode
-                                </div>
-                                <div style={{ fontSize: 12 }}>
-                                  {item?.mode}
-                                </div>
-                              </Col>
-                              <Col xl={8} md={8} lg={8} sm={8} xs={8}>
-                                <div
-                                  style={{
-                                    fontSize: 12,
-                                    color: "#003399",
-                                    fontWeight: "bolder",
-                                  }}
-                                >
-                                  Location
-                                </div>
-                                <div style={{ fontSize: 12 }}>
-                                  {item?.location}
-                                </div>
-                              </Col>
-                              <Col xl={8} md={8} lg={8} sm={8} xs={8}>
-                                <div
-                                  style={{
-                                    fontSize: 12,
-                                    color: "#003399",
-                                    fontWeight: "bolder",
-                                  }}
-                                >
-                                  Meeting Location
-                                </div>
-                                <div style={{ fontSize: 12 }}>
-                                  {item?.meetingLocation}
-                                </div>
-                              </Col>
-                            </Row>
+                          View
+                        </Button>
+                      ]}
+                      className="query-list-item"
+                    >
+                      <List.Item.Meta
+                        avatar={
+                          <Avatar 
+                            icon={<FileSearchOutlined />} 
+                            style={{ 
+                              backgroundColor: getPriorityColor(item.priority),
+                              boxShadow: `0 4px 8px ${getPriorityColor(item.priority)}40`
+                            }} 
+                          />
+                        }
+                        title={
+                          <div className="query-title-container">
+                            <span className="query-title">Query ID: {item.proposalId}</span>
+                            <Tag color={getPriorityColor(item.priority)} className="priority-tag">
+                              {item.priority}
+                            </Tag>
                           </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div style={{padding:"3%",display:"flex",justifyContent:"center"}}>
-                        <Image style={{width:"70%",marginLeft:"20%"}} preview={false} src={noData}/>
-                      </div>
-                    )}
-                  </Spin>
-                </div>
-              </SdWidgetCom>
-            </Col>
-            <Col className="col_widget">
-              <SdWidgetCom
-                backgroundColorToDo={"#fff"}
-                headeColor={"#003399"}
-                title_header={"Resources"}
-                headerImgSrc={resource}
-              >
-                <div
-                  className="claims_body hScroll resource_card"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: "8px",
-                  }}
-                >
-                  <Row className="w-100 text-center text-primary">
-                    <Col span={8} className="p-0 border-right">
-                      <div className="resource_card_item" onClick={handleLoanEligibilityClick}>
-                        <div className="loan_eligibility_icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="30"
-                            viewBox="0 0 32 30"
-                            fill="none"
-                          >
-                            <path
-                              d="M14.0541 24.8634H7.36213C2.71307 24.8634 1.53442 23.6233 1.53442 18.6769V7.09307C1.53442 2.61173 2.50356 1.17432 6.15733 0.948845C6.52402 0.934753 6.92997 0.920654 7.36213 0.920654H21.9117C26.5608 0.920654 27.7394 2.16077 27.7394 7.10716V13.3219"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M30.4979 23.4553C30.4979 24.5122 30.2021 25.5127 29.6809 26.3583C28.709 27.993 26.9201 29.0922 24.8636 29.0922C22.807 29.0922 21.0182 27.993 20.0462 26.3583C19.5251 25.5127 19.2292 24.5122 19.2292 23.4553C19.2292 20.3409 21.7506 17.8184 24.8636 17.8184C27.9765 17.8184 30.4979 20.3409 30.4979 23.4553Z"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-miterlimit="10"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M22.6631 23.8009L24.0039 25.5705L26.8888 22.0491"
-                              stroke="#003399"
-                              stroke-width="1.2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M15.8483 9.53058H8.68484C8.2924 9.53058 7.99741 9.85894 7.99741 10.2627C7.99741 10.6665 8.2924 10.9948 8.68484 10.9948H15.5766C15.1641 11.8135 14.3718 12.3554 13.4577 12.3554H8.68484C8.2924 12.3554 7.99741 12.6837 7.99741 13.0875C7.99741 13.4912 8.2924 13.8196 8.68484 13.8196H11.6843L16.2573 20.4727L16.2573 20.4727L16.2587 20.4746C16.4052 20.6773 16.6 20.7729 16.817 20.7729C16.9692 20.7729 17.0993 20.7251 17.2241 20.6356L17.2241 20.6357L17.2277 20.6328C17.5482 20.3799 17.5869 19.9254 17.3776 19.6101L17.3776 19.6101L17.3767 19.6088L13.4092 13.8393H13.4393C15.1348 13.8393 16.5485 12.6544 17.0388 11.0343H19.4053C19.7978 11.0343 20.0928 10.706 20.0928 10.3022C20.0928 9.9006 19.7998 9.57009 19.4237 9.57009H17.2244C17.1719 8.67591 16.8546 7.84844 16.3501 7.20212H19.4237C19.8161 7.20212 20.1111 6.87377 20.1111 6.47001C20.1111 6.06624 19.8161 5.73789 19.4237 5.73789H8.68484C8.30085 5.73789 7.99741 6.01805 7.99741 6.4305C7.99741 6.83426 8.2924 7.16261 8.68484 7.16261H13.4577C14.7052 7.16261 15.7471 8.20445 15.8483 9.53058Z"
-                              fill="#003399"
-                              stroke="#003399"
-                              stroke-width="0.2"
-                            />
-                          </svg>
-                        </div>
-                        <div className="placeholder">Loan Eligibility</div>
-                      </div>
-                    </Col>
-                    <Col span={8} className="p-0 border-right">
-                      <div className="resource_card_item">
-                        <div className="product_catelog_icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 32 32"
-                            fill="none"
-                          >
-                            <path
-                              d="M22.6667 17.8666V21.8666C22.6667 27.1999 20.5334 29.3333 15.2001 29.3333H10.1334C4.80008 29.3333 2.66675 27.1999 2.66675 21.8666V16.7999C2.66675 11.4666 4.80008 9.33325 10.1334 9.33325H14.1334"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M22.6666 17.8666H18.4C15.2 17.8666 14.1333 16.7999 14.1333 13.5999V9.33325L22.6666 17.8666Z"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M15.4666 2.66675H20.7999"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M9.33325 6.66675C9.33325 4.45341 11.1199 2.66675 13.3333 2.66675H16.8266"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M29.3333 10.6667V18.9201C29.3333 20.9867 27.6533 22.6667 25.5867 22.6667"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M29.3333 10.6667H25.3333C22.3333 10.6667 21.3333 9.66675 21.3333 6.66675V2.66675L29.3333 10.6667Z"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </div>
-                        <div style={{ cursor: "pointer" }} onClick={() => navigate("/product-catalogue")} className="placeholder">Product Catalogue</div>
-                      </div>
-                    </Col>
-                    <Col style={{ cursor: "pointer" }} onClick={handleEmiCalculatorClick} span={8} className="p-0">
-                      <div className="resource_card_item">
-                        <div className="emi_calculator_icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="33"
-                            height="32"
-                            viewBox="0 0 33 32"
-                            fill="none"
-                          >
-                            <rect
-                              x="4.08325"
-                              y="2.08325"
-                              width="25.1667"
-                              height="27.8333"
-                              rx="4.25"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                            />
-                            <path
-                              d="M23.6665 9.25V10.75C23.6665 11.98 22.6243 13 21.3332 13H11.9998C10.7243 13 9.6665 11.995 9.6665 10.75V9.25C9.6665 8.02 10.7087 7 11.9998 7H21.3332C22.6243 7 23.6665 8.005 23.6665 9.25Z"
-                              stroke="#003399"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <circle
-                              cx="11.9165"
-                              cy="18.25"
-                              r="1.25"
-                              fill="#003399"
-                            />
-                            <circle
-                              cx="16.6165"
-                              cy="18.25"
-                              r="1.25"
-                              fill="#003399"
-                            />
-                            <circle
-                              cx="21.4165"
-                              cy="18.25"
-                              r="1.25"
-                              fill="#003399"
-                            />
-                            <circle
-                              cx="11.9165"
-                              cy="23.75"
-                              r="1.25"
-                              fill="#003399"
-                            />
-                            <circle
-                              cx="16.6165"
-                              cy="23.75"
-                              r="1.25"
-                              fill="#003399"
-                            />
-                            <circle
-                              cx="21.4165"
-                              cy="23.75"
-                              r="1.25"
-                              fill="#003399"
-                            />
-                          </svg>
-                        </div>
-                        <div className="placeholder">EMI calculator</div>
-                      </div>
-                    </Col>
-                    <Col>
-                      <FloatButton
-                        shape="circle"
-                        trigger="click"
-                        style={{ right: 24 }}
-                        icon={<PlusOutlined />}
-                        tooltip={
-                          <div
-                            className="d-flex flex-column justify-content-around"
-                            style={{ width: "100%", height: "100px" }}
-                          >
-                            <div
-                              className="d-flex p-2"
-                              onClick={handleNewApplicationClick}
-                              style={{ cursor: "pointer" }}
-                            >
-                              <img src={addSquare} className="pr-2" />
-                              <div className="tooltip-title">
-                                Add New Application
-                              </div>
-                            </div>
-                            <div
-                              className="d-flex p-2"
-                              onClick={handleEmiCalculatorClick}
-                              style={{ cursor: "pointer" }}
-                            >
-                              <div className="tooltip-title">
-                                <CalculatorOutlined
-                                  className="pr-2"
-                                  style={{ fontSize: "20px" }}
-                                />
-                                EMI Calculator
-                              </div>
+                        }
+                        description={
+                          <div className="query-description">
+                            <div className="query-text">{item.description}</div>
+                            <div className="query-date">
+                              <ClockCircleOutlined /> {item.date}
                             </div>
                           </div>
                         }
-                      ></FloatButton>
-                      <NewApplication
-                        isVisible={isNewApplicationModalVisible}
-                        checkEligibility={checkEligibility}
-                        setCheckEligibility={setCheckEligibility}
-                        showSuccessPage={showSuccessPage}
-                        setShowSuccessPage={setShowSuccessPage}
-                        showErrorPage={showErrorPage}
-                        setShowErrorPage={setShowErrorPage}
-                        checkingEligible={checkingEligible}
-                        setIsNewApplicationModalVisible={setIsNewApplicationModalVisible}
                       />
-                      <EmiCalculatorModal
-                        checkEligibility={checkEligibility}
-                        setCheckEligibility={setCheckEligibility}
-                        showSuccessPage={showSuccessPage}
-                        setShowSuccessPage={setShowSuccessPage}
-                        showErrorPage={showErrorPage}
-                        setShowErrorPage={setShowErrorPage}
-                        resetModalVisible={handleEmiModalCancel}
-                        contentTrue={contentTrue}
-                        setContentTrue={setContentTrue}
-                        resetFunction={handleEmiModalCancel}
-                        isVisible={isEmiModalVisible}
-                        form={form}
-                        setIsEmiModalVisible={setIsEmiModalVisible}
-                        onCancel={handleEmiModalCancel}
-                        onChange={handleChange}
-                        value={value}
-                        checkingEligible={checkingEligible}
-                        setIsNewApplicationModalVisible={setIsNewApplicationModalVisible}
+                    </List.Item>
+                  )}
+                />
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+              <Card 
+                title={
+                  <div className="card-title">
+                    <BarsOutlined className="card-title-icon" />
+                    <span>Pending Approvals</span>
+                  </div>
+                } 
+                extra={<a href="#" onClick={() => navigate("/queries-approvals", { state: "Pending Approvals" })}>View All</a>}
+                className="dashboard-card approvals-card"
+                bordered={false}
+              >
+                <div className="card-stats">
+                  <div className="card-stat-item">
+                    <div className="stat-count">{approvalsList.length}</div>
+                    <div className="stat-label">Total Approvals</div>
+                  </div>
+                  <div className="card-stat-item">
+                    <div className="stat-count" style={{ color: 'var(--accent-color)' }}>2</div>
+                    <div className="stat-label">Senior Level</div>
+                  </div>
+                  <div className="card-stat-item">
+                    <div className="stat-count" style={{ color: 'var(--primary-color)' }}>1</div>
+                    <div className="stat-label">Due Today</div>
+                  </div>
+                </div>
+                <List
+                  className="approvals-list"
+                  itemLayout="horizontal"
+                  dataSource={approvalsList}
+                  renderItem={item => (
+                    <List.Item
+                      actions={[
+                        <Button 
+                          type="primary" 
+                          size="small"
+                          onClick={() => navigate("/Application-Listing/Application", { state: { isPendingApproval: true, proposalId: item.proposalId } })}
+                          className="view-button"
+                        >
+                          View
+                        </Button>
+                      ]}
+                      className="approval-list-item"
+                    >
+                      <List.Item.Meta
+                        avatar={
+                          <Avatar 
+                            icon={<BarsOutlined />} 
+                            style={{ 
+                              backgroundColor: '#FF8A00',
+                              boxShadow: '0 4px 8px rgba(255, 138, 0, 0.25)'
+                            }} 
+                          />
+                        }
+                        title={
+                          <div className="approval-title-container">
+                            <span className="approval-title">Approval ID: {item.proposalId}</span>
+                            <div className="customer-name">{item.customer}</div>
+                          </div>
+                        }
+                        description={
+                          <div className="approval-description">
+                            <div className="approval-text">{item.description}</div>
+                            <div className="approval-date">
+                              <ClockCircleOutlined /> {item.date}
+                            </div>
+                          </div>
+                        }
                       />
+                    </List.Item>
+                  )}
+                />
+              </Card>
+            </Col>
+          </Row>
+
+          {/* FOURTH ROW - Resources and Todo Tasks */}
+          <Row gutter={[16, 16]} className="dashboard-row">
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+              <Card 
+                title={
+                  <div className="card-title">
+                    <ApartmentOutlined className="card-title-icon" />
+                    <span>Resources</span>
+                  </div>
+                } 
+                extra={<a href="#" onClick={() => navigate("/product-catalogue")}>View All</a>}
+                className="dashboard-card resources-card"
+              >
+                <div className="resource-actions">
+                  <Row gutter={[16, 16]}>
+                    <Col span={8}>
+                      <div className="resource-action-item" onClick={handleLoanEligibilityClick}>
+                        <CalculatorOutlined className="resource-action-icon" />
+                        <div className="resource-action-text">Loan Eligibility</div>
+                      </div>
+                    </Col>
+                    <Col span={8}>
+                      <div className="resource-action-item" onClick={() => navigate("/product-catalogue")}>
+                        <ApartmentOutlined className="resource-action-icon" />
+                        <div className="resource-action-text">Product Catalogue</div>
+                      </div>
+                    </Col>
+                    <Col span={8}>
+                      <div className="resource-action-item" onClick={handleEmiCalculatorClick}>
+                        <CalculatorOutlined className="resource-action-icon" />
+                        <div className="resource-action-text">EMI Calculator</div>
+                      </div>
                     </Col>
                   </Row>
                 </div>
-              </SdWidgetCom>
+
+                <Divider className="resource-divider" />
+
+                <div className="resource-products">
+                  <Title level={5} className="section-title">Featured Products</Title>
+                  <List
+                    className="products-list"
+                    itemLayout="horizontal"
+                    dataSource={productList}
+                    renderItem={item => (
+                      <List.Item>
+                        <List.Item.Meta
+                          avatar={<Avatar icon={item.icon} style={{ backgroundColor: '#68BA7F' }} />}
+                          title={<span className="product-name">{item.name}</span>}
+                          description={
+                            <div className="product-details">
+                              <Row gutter={[8, 8]}>
+                                <Col span={8}>
+                                  <div className="product-detail">
+                                    <span className="detail-label">Interest:</span>
+                                    <span className="detail-value">{item.interestRate}</span>
+                                  </div>
+                                </Col>
+                                <Col span={8}>
+                                  <div className="product-detail">
+                                    <span className="detail-label">Max Amount:</span>
+                                    <span className="detail-value">{item.maxAmount}</span>
+                                  </div>
+                                </Col>
+                                <Col span={8}>
+                                  <div className="product-detail">
+                                    <span className="detail-label">Tenure:</span>
+                                    <span className="detail-value">{item.tenure}</span>
+                                  </div>
+                                </Col>
+                              </Row>
+                            </div>
+                          }
+                        />
+                      </List.Item>
+                    )}
+                  />
+                </div>
+              </Card>
+            </Col>
+            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+              <Card 
+                title={
+                  <div className="card-title">
+                    <CheckOutlined className="card-title-icon" />
+                    <span>Todo Tasks</span>
+                  </div>
+                } 
+                extra={<a href="#" onClick={() => navigate("/Todo")}>View All</a>}
+                className="dashboard-card todo-card"
+              >
+                <List
+                  className="todo-list"
+                  itemLayout="horizontal"
+                  dataSource={todoTasks}
+                  renderItem={item => (
+                    <List.Item className="todo-item">
+                      <List.Item.Meta
+                        avatar={
+                          <Checkbox 
+                            checked={item.completed} 
+                            onChange={() => handleTodoCheckboxChange(item.id)}
+                          />
+                        }
+                        title={
+                          <div className="todo-title-container">
+                            <span className={`todo-title ${item.completed ? 'completed' : ''}`}>
+                              {item.description}
+                            </span>
+                            <Tag color={getPriorityColor(item.priority)} className="priority-tag">
+                              {item.priority}
+                            </Tag>
+                          </div>
+                        }
+                        description={
+                          <div className="todo-date">
+                            <ClockCircleOutlined /> Due: {moment(item.targetDate).format('MMM DD, YYYY')}
+                          </div>
+                        }
+                      />
+                    </List.Item>
+                  )}
+                />
+                <div className="add-todo-container">
+                  <Button 
+                    type="primary" 
+                    icon={<PlusOutlined />} 
+                    onClick={() => navigate("/Todo")}
+                    className="add-todo-button"
+                  >
+                    Add New Task
+                  </Button>
+                </div>
+              </Card>
             </Col>
           </Row>
         </div>
       </div>
+
+      {/* Modals */}
+      {isEmiModalVisible && (
+        <EmiCalculatorModal
+          visible={isEmiModalVisible}
+          onCancel={handleEmiModalCancel}
+        />
+      )}
+
+      {isNewApplicationModalVisible && (
+        <NewApplication
+          open={isNewApplicationModalVisible}
+          checkingEligible={checkingEligible}
+          form={form}
+          contentTrue={contentTrue}
+          setContentTrue={setContentTrue}
+          checkEligibility={checkEligibility}
+          showSuccessPage={showSuccessPage}
+          showErrorPage={showErrorPage}
+          value={value}
+          handleChange={handleChange}
+          onCancel={() => setIsNewApplicationModalVisible(false)}
+        />
+      )}
+
+      {/* Quick Action Buttons */}
+      <FloatButton
+        type="primary"
+        style={{ right: 24 }}
+        icon={<PlusOutlined />}
+        tooltip="New Application"
+        onClick={handleNewApplicationClick}
+      />
     </>
   );
 };
+
+// HomeOutlined is missing in imports, adding it inline
+function HomeOutlined() {
+  return (
+    <svg viewBox="0 0 1024 1024" width="1em" height="1em" fill="currentColor">
+      <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z" />
+    </svg>
+  );
+}
 
 export default CreditxDashboard;

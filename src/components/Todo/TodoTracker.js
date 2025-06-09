@@ -202,8 +202,8 @@ const TodoTracker = ({ props }) => {
       render: (text, record) => (
         <>
           <div style={{ display: "flex", flexDirection: "row", rowGap: 10 }}>
-            <EditOutlined style={{ color: "#003399",marginRight:10 }} type="primary" onClick={() => handleUpdate(record)} />
-            <DeleteOutlined style={{ color: "#003399" }} type="primary" onClick={() => showModal(record)} />
+            <EditOutlined style={{ color: "#68BA7F",marginRight:10 }} type="primary" onClick={() => handleUpdate(record)} />
+            <DeleteOutlined style={{ color: "#68BA7F" }} type="primary" onClick={() => showModal(record)} />
           </div>
         </>
       ),
@@ -290,7 +290,7 @@ const TodoTracker = ({ props }) => {
       <div className='table-top-div' >
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10, marginTop: 10 }}>
 
-          <span><b style={{ fontSize: 21, marginTop: 10, color: "#003399" }}>To-Do List
+          <span><b style={{ fontSize: 21, marginTop: 10, color: "#68BA7F" }}>To-Do List
           </b></span>
         </div>
 
@@ -321,8 +321,8 @@ const TodoTracker = ({ props }) => {
       <Modal title="Delete Status" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <p>Do You Want To Delete This Task?</p>
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
-          <Button style={{ backgroundColor: "white", color: "#003399", width: 70, border: "1px solid white",border:"1px solid #003399" }} onClick={handleCancel}>No</Button>
-          <Button style={{ backgroundColor: "#003399", color: "white", width: 70, border: "1px solid white",marginLeft:5 }} onClick={handleOk}>Yes</Button>
+          <Button style={{ backgroundColor: "white", color: "#68BA7F", width: 70, border: "1px solid white",border:"1px solid #68BA7F" }} onClick={handleCancel}>No</Button>
+          <Button style={{ backgroundColor: "#68BA7F", color: "white", width: 70, border: "1px solid white",marginLeft:5 }} onClick={handleOk}>Yes</Button>
         </div>
       </Modal>
     </>

@@ -80,12 +80,12 @@ const TodoListItem = () => {
                       <div style={{
                         backgroundColor: item?.priority == "High" ? "red" :
                           item?.priority === "Medium" ? "orange" :
-                            "#003399"
+                            "#68BA7F"
                       }} class="alerts-child"></div>
                       <div style={{
                         color: item?.priority == "High" ? "red" :
                           item?.priority === "Medium" ? "orange" :
-                            "#003399"
+                            "#68BA7F"
                       }} class="high">{item.priority}</div>
                     </div>
                   </div>

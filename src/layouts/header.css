@@ -101,7 +101,7 @@
   border: 0;
   width: 120px;
   color: #fff;
-  background-color: #003399;
+  background-color: #68BA7F;
   font-weight: 500;
   font-size: 16px;
 }
@@ -153,7 +153,7 @@
 
 .profile-content .text-wrapper {
   align-self: stretch;
-  color: #003399;
+  color: #68BA7F;
   font-family: var(--heading-bold-heading4-font-family);
   font-size: var(--heading-bold-heading4-font-size);
   font-style: var(--heading-bold-heading4-font-style);
@@ -166,7 +166,7 @@
 
 .profile-content .div {
   align-self: stretch;
-  color: #003399;
+  color: #68BA7F;
   font-family: var(--input-field-helper-text-font-family);
   font-size: var(--input-field-helper-text-font-size);
   font-style: var(--input-field-helper-text-font-style);

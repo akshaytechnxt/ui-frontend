@@ -1,7 +1,7 @@
 /* MainTabs.css */
 
 .header-img {
-  background-color: #003399;
+  background-color: #68BA7F;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -25,7 +25,7 @@
 
 /* tabs background */
 .mainTabsStyle .ant-tabs-card.ant-tabs-small>.ant-tabs-nav .ant-tabs-tab {
-  background: #003399;
+  background: #68BA7F;
   border: 2px solid #28B1FF !important;
   color: #28B1FF;
 }

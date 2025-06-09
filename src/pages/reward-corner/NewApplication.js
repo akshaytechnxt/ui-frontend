@@ -24,8 +24,9 @@ import { setLoader } from "../../state/slices/loader";
 import dayjs from "dayjs";
 import { fetchProposalById } from "../../state/slices/proposalSlice";
 
-const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEligible,showSuccessPage,showErrorPage,setShowErrorPage,setShowSuccessPage,checkEligibility,setCheckEligibility }) => {
-  const [form] = Form.useForm();
+const NewApplication = ({ open, onCancel, checkingEligible, form: externalForm, contentTrue, setContentTrue, checkEligibility: externalCheckEligibility, showSuccessPage: externalShowSuccessPage, showErrorPage: externalShowErrorPage, value, handleChange }) => {
+  const [localForm] = Form.useForm();
+  const formToUse = externalForm || localForm;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [value1, setValue1] = useState("entity");
@@ -37,6 +38,11 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
   const [othersField, setOthersField] = useState(false);
   const [id, setId] = useState();
   const [data, setData] = useState({});
+  
+  // Internal state
+  const [showSuccessPage, setShowSuccessPage] = useState(externalShowSuccessPage || false);
+  const [showErrorPage, setShowErrorPage] = useState(externalShowErrorPage || false);
+  const [checkEligibility, setCheckEligibility] = useState(externalCheckEligibility || false);
 
   const [inputValue, setInputValue] = useState({
     applicationType: "",
@@ -53,8 +59,8 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
   });
 
   const handleNewApplicationModalCancel = () => {
-    setIsNewApplicationModalVisible(false);
-    form.resetFields()
+    onCancel();
+    formToUse.resetFields()
   };
 
   useEffect(() => {
@@ -130,13 +136,13 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
   const onRadioChange1 = (type) => {
     setOthersField(false)
     setValue1(type?.value);
-    form.resetFields();
+    formToUse.resetFields();
   };
 
   const onRadioChange2 = (type) => {
     setValue2(type?.value);
     setOthersField(false)
-    form.resetFields();
+    formToUse.resetFields();
   };
 
   const purposeLoan = (label, value) => {
@@ -194,7 +200,7 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
           setId(response.data.data.id);
           setCheckEligibility(true);
           setShowSuccessPage(true);
-          form.resetFields();
+          formToUse.resetFields();
           console.log("Response:", response);
         } else if (response?.resCode === 1) {
           // setIsNewApplicationModalVisible(true)
@@ -243,23 +249,23 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
   }
 
   const handleNext = () => {
-    setShowErrorPage(false)
-    setIsNewApplicationModalVisible()
-    form.resetFields();
-    setCheckEligibility(false)
+    if (onCancel) {
+      onCancel();
+    }
+    formToUse.resetFields();
   }
 
   return (
     <Modal
       width={1000}
       title={checkEligibility ? "" : checkingEligible}
-      visible={isVisible}
+      open={open}
       onCancel={handleNewApplicationModalCancel}
       footer={null}
       closeIcon={checkEligibility ? null : <CloseOutlined />}
     >
       {!checkEligibility && (
-        <Form form={form} onFinish={handleCheckEligibility} layout="vertical">
+        <Form form={formToUse} onFinish={handleCheckEligibility} layout="vertical">
           <Row
             gutter={[16, { xs: 16, sm: 10, md: 16, lg: 16 }]}
             className="p-3"
@@ -605,8 +611,8 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
                   style={{
                     marginRight: "10px",
                     backgroundColor: "#fff",
-                    color: "#003399",
-                    border: "1px solid #003399",
+                    color: "#68BA7F",
+                    border: "1px solid #68BA7F",
                     borderRadius: "8px",
                     width: "96px",
                     height: "42px",
@@ -624,10 +630,10 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
                 <Button
                   htmlType="submit"
                   style={{
-                    backgroundColor: "#003399",
+                    backgroundColor: "#68BA7F",
                     color: "#fff",
-                    border: "1px solid #003399",
-                    boxShadow: "0px 2px 12px 0px #00339952",
+                    border: "1px solid #68BA7F",
+                    boxShadow: "0px 2px 12px 0px #68BA7F52",
                     width: "178px",
                     height: "42px",
                     padding: "10px 22px 10px 22px",
@@ -665,7 +671,7 @@ const NewApplication = ({ isVisible, setIsNewApplicationModalVisible, checkingEl
                   navigate("/Application-Listing/Application", {
                     state: { data, id },
                   });
-                  form.resetFields();
+                  formToUse.resetFields();
                 }}
               >
                 Start Application Form

@@ -150,7 +150,7 @@ function ProductCatalogue() {
                         <Col xl={11} sm={24} md={11} xs={24} lg={11}>
                             <Card>
                                 <div>
-                                    <h4 style={{ color: "#003399" }}>{selectedKey1?.productName}</h4>
+                                    <h4 style={{ color: "#68BA7F" }}>{selectedKey1?.productName}</h4>
                                     <div className="title-subproduct">Description</div>
                                     <div dangerouslySetInnerHTML={{ __html: selectedKey1?.productDescription }} />
                                 </div>
@@ -208,7 +208,7 @@ function ProductCatalogue() {
                                             width="100%"
                                             height="100%"
                                         />
-                                        <Button onClick={() => download(selectedKey1?.brochuresFileData, selectedKey1?.brochuresTitle)} style={{ width: "98%", backgroundColor: "#003399", color: "white", borderRadius: 20, marginTop: 10 }}>Download</Button>
+                                        <Button onClick={() => download(selectedKey1?.brochuresFileData, selectedKey1?.brochuresTitle)} style={{ width: "98%", backgroundColor: "#68BA7F", color: "white", borderRadius: 20, marginTop: 10 }}>Download</Button>
                                     </Col>
                                 </Row>
                             </Card>

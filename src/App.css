@@ -65,7 +65,7 @@ a {
 .heading-collection {
   padding: 1% 1%;
   border-bottom: 1px solid lightgray;
-  color: #003399;
+  color: #68BA7F;
   font-size: 16px;
   display: flex;
   font-weight: 400;
@@ -77,7 +77,7 @@ a {
 .heading-collection1 {
   padding: 3% 1%;
   border-bottom: 1px solid lightgray;
-  color: #003399;
+  color: #68BA7F;
   font-size: 16px;
   font-weight: 400;
   background: #D2E1FF;
@@ -137,12 +137,12 @@ a {
 }
 
 .product-div-1 {
-  background-color: #003399;
+  background-color: #68BA7F;
   min-height: 10rem;
 }
 
 .product-div-1 .breadcrumb {
-  background-color: #003399;
+  background-color: #68BA7F;
   margin-bottom: 0rem;
   padding: 0rem 1rem;
 }
@@ -173,15 +173,15 @@ a {
 .title-card-product {
   padding: 8px;
   background-color: #D2E1FF;
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
   font-size: 18px;
 }
 
 .title-card-sub-product {
   padding: 8px;
-  border-left: 1px solid #003399;
-  color: #003399;
+  border-left: 1px solid #68BA7F;
+  color: #68BA7F;
   font-weight: 500;
   font-size: 18px;
   background-color: #f5f8fd;
@@ -209,7 +209,7 @@ a {
   width: 30px;
   height: 35px;
   background-color: transparent;
-  color: #003399;
+  color: #68BA7F;
   font-size: 24px;
   text-align: center;
   line-height: 30px;
@@ -261,7 +261,7 @@ a {
 
 .total-value-amount {
   font-size: 20px;
-  color: #003399;
+  color: #68BA7F;
   font-weight: 500;
 }
 
@@ -283,7 +283,7 @@ a {
 
 .view-btn {
   color: white;
-  background-color: #003399;
+  background-color: #68BA7F;
   margin-right: 20px;
   width: 75px;
   border-radius: 8px;
@@ -325,7 +325,7 @@ a {
 .upload-receipt button {
   width: 225px;
   height: 50px;
-  color: #003399;
+  color: #68BA7F;
 }
 
 :where(.css-mzwlov).ant-breadcrumb .ant-breadcrumb-separator {
@@ -396,14 +396,14 @@ a {
 }
 
 .title-existing-retail {
-  color: #003399;
+  color: #68BA7F;
   font-size: 16px;
   margin: 5px 0px;
   font-weight: bold;
 }
 
 .button-video {
-  background-color: #003399;
+  background-color: #68BA7F;
   color: white;
   width: 50%;
   border-radius: 10px;
@@ -412,8 +412,8 @@ a {
 
 .button-video1 {
   background-color: white;
-  color: #003399 !important;
-  border: 1px solid #003399;
+  color: #68BA7F !important;
+  border: 1px solid #68BA7F;
   width: 50%;
   border-radius: 10px;
   margin: 0px 5px;
@@ -425,7 +425,7 @@ a {
 }
 
 .ant-modal-title {
-  color: #003399 !important;
+  color: #68BA7F !important;
   background-color: #ebeff7 !important;
   padding: 10px !important;
 }
@@ -470,7 +470,7 @@ a {
 }
 
 .radio-product1 :where(.css-dev-only-do-not-override-m4timi).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  border-left: 2px solid #003399 !important;
+  border-left: 2px solid #68BA7F !important;
   border-radius: 0px !important;
   border: none !important;
 }
@@ -496,11 +496,11 @@ border-top-left-radius: 10px;
 
 :where(.css-dev-only-do-not-override-m4timi).ant-drawer .ant-drawer-header {
 background: #ebeff7;
-color: #003399;
+color: #68BA7F;
 }
 
 :where(.css-dev-only-do-not-override-m4timi).ant-drawer .ant-drawer-close {
-color: #003399;
+color: #68BA7F;
 }
 
 :where(.css-dev-only-do-not-override-m4timi).ant-tabs-card.ant-tabs-top >.ant-tabs-nav .ant-tabs-tab, :where(.css-dev-only-do-not-override-m4timi).ant-tabs-card.ant-tabs-top >div>.ant-tabs-nav .ant-tabs-tab {

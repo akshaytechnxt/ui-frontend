@@ -161,19 +161,19 @@ const VideoKyc = () => {
       {screenView === false ? <>
         <div>
           <div style={{ padding: 15 }}>
-            <h5 style={{ textAlign: "center", display: "flex", justifyContent: "center", flexDirection: "column", color: "#003399", fontWeight: 'bold', fontSize: 23, padding: "10px 0px" }}>Video KYC</h5>
+            <h5 style={{ textAlign: "center", display: "flex", justifyContent: "center", flexDirection: "column", color: "#68BA7F", fontWeight: 'bold', fontSize: 23, padding: "10px 0px" }}>Video KYC</h5>
             <div className='video-width'>
               <Webcam muted={true} style={{ width: '100%', height: 'auto' }} audio={true} ref={webcamRef} videoConstraints={videoConstraints} audioConstraints={audioConstraints} />
             </div>
             <div style={{ padding: "10px", display: "flex", flexDirection: "row", alignItems: "center", gap: "10px", justifyContent: "center" }}>
-              <div style={{ fontSize: 16, fontWeight: "bold", color: "#003399" }}>The video will stop in:</div>
-              <div style={{ fontSize: 23, fontWeight: "bold", color: "#003399" }}>{timeLeft === 0 ? "0:00" : timeLeft}</div>
+              <div style={{ fontSize: 16, fontWeight: "bold", color: "#68BA7F" }}>The video will stop in:</div>
+              <div style={{ fontSize: 23, fontWeight: "bold", color: "#68BA7F" }}>{timeLeft === 0 ? "0:00" : timeLeft}</div>
             </div>
             <div style={{ padding: "10px", display: "flex", flexDirection: "row", alignItems: "center", gap: "10px", justifyContent: "center" }}>
-              <div style={{ fontSize: 16, fontWeight: "bold", color: "#003399" }}>
+              <div style={{ fontSize: 16, fontWeight: "bold", color: "#68BA7F" }}>
                 Kindly Read This OTP :
               </div>
-              <div style={{ fontSize: 26, fontWeight: "bold", color: "#003399" }}>
+              <div style={{ fontSize: 26, fontWeight: "bold", color: "#68BA7F" }}>
                 {userData?.data?.kycDetail?.otp}
               </div>
             </div>
@@ -209,7 +209,7 @@ const VideoKyc = () => {
         justifyContent: "center",
         marginTop: "50%"
       }}><img src={successScreen} />
-      <div style={{fontSize:"18px",fontWeight:"bold",color:"#003399"}}>Thank you for the Video KYC</div></div> : <>
+      <div style={{fontSize:"18px",fontWeight:"bold",color:"#68BA7F"}}>Thank you for the Video KYC</div></div> : <>
       <div style={{
         display: "flex",
         flexDirection:"column",
@@ -218,7 +218,7 @@ const VideoKyc = () => {
         justifyContent: "center",
         marginTop: "50%"
       }}><img src={failScreen} />
-      <div style={{fontSize:"18px",fontWeight:"bold",color:"#003399"}}>Video KYC Failed</div></div>
+      <div style={{fontSize:"18px",fontWeight:"bold",color:"#68BA7F"}}>Video KYC Failed</div></div>
       </>}
     </>
   );

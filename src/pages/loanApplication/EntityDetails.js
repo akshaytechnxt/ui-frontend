@@ -473,7 +473,7 @@ const EntityDetails = ({
         <div className="applicant-documents">
           <div className="currentprogress">Current Progress</div>
           <div className="progress-container">
-            <Progress percent={60} strokeColor="#003399" />
+            <Progress percent={60} strokeColor="#68BA7F" />
           </div>
         </div>
       </Col>
@@ -1134,8 +1134,8 @@ const EntityDetails = ({
               <Button
                 style={{
                   backgroundColor: "#fff",
-                  color: "#003399",
-                  border: "1px solid #003399",
+                  color: "#68BA7F",
+                  border: "1px solid #68BA7F",
                   borderRadius: "8px",
                   width: "96px",
                   height: "42px",
@@ -1146,10 +1146,10 @@ const EntityDetails = ({
               </Button>
               <Button
                 style={{
-                  backgroundColor: "#003399",
+                  backgroundColor: "#68BA7F",
                   color: "#fff",
-                  border: "1px solid #003399",
-                  boxShadow: "0px 2px 12px 0px #00339952",
+                  border: "1px solid #68BA7F",
+                  boxShadow: "0px 2px 12px 0px #68BA7F52",
                   width: "178px",
                   height: "42px",
                   padding: "10px 22px 10px 22px",

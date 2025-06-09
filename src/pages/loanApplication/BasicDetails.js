@@ -1178,7 +1178,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
         <div className="applicant-documents">
           <div className="currentprogress">Current Progress</div>
           <div className="progress-container">
-            <Progress percent={20} strokeColor="#003399" />
+            <Progress percent={20} strokeColor="#68BA7F" />
           </div>
         </div>
       </Col>
@@ -1831,7 +1831,7 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
           </Row>
           <Row style={{ alignItems: "center" }}>
             <Col style={{ display: "flex", justifyContent: "center" }} xl={22} sm={22} xs={22} lg={22} md={22}>
-              <Button onClick={addCoApplicant} style={{ backgroundColor: "white", color: "#003399", border: "1px solid #003399", borderRadius: 10, margin: "10px" }}>Add Co-Applicant</Button>
+              <Button onClick={addCoApplicant} style={{ backgroundColor: "white", color: "#68BA7F", border: "1px solid #68BA7F", borderRadius: 10, margin: "10px" }}>Add Co-Applicant</Button>
             </Col>
             {/* <Col xl={2} sm={2} xs={2} lg={2} md={2}>
               <DeleteOutlined style={{ color: "red" }} onClick={addCoApplicant} />
@@ -2124,8 +2124,8 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
               <Button
                 style={{
                   backgroundColor: "#fff",
-                  color: "#003399",
-                  border: "1px solid #003399",
+                  color: "#68BA7F",
+                  border: "1px solid #68BA7F",
                   borderRadius: "8px",
                   width: "96px",
                   height: "42px",
@@ -2136,10 +2136,10 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
               </Button>
               <Button
                 style={{
-                  backgroundColor: "#003399",
+                  backgroundColor: "#68BA7F",
                   color: "#fff",
-                  border: "1px solid #003399",
-                  boxShadow: "0px 2px 12px 0px #00339952",
+                  border: "1px solid #68BA7F",
+                  boxShadow: "0px 2px 12px 0px #68BA7F52",
                   width: "89px",
                   height: "42px",
                   padding: "10px 22px 10px 22px",
@@ -2268,8 +2268,8 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
                 <Button
                   style={{
                     backgroundColor: "#fff",
-                    color: "#003399",
-                    border: "1px solid #003399",
+                    color: "#68BA7F",
+                    border: "1px solid #68BA7F",
                     borderRadius: "8px",
                     width: "96px",
                     height: "42px",
@@ -2281,10 +2281,10 @@ const BasicDetails = ({ form, formData, setFormData, id, document }) => {
                 </Button>
                 <Button
                   style={{
-                    backgroundColor: "#003399",
+                    backgroundColor: "#68BA7F",
                     color: "#fff",
-                    border: "1px solid #003399",
-                    boxShadow: "0px 2px 12px 0px #00339952",
+                    border: "1px solid #68BA7F",
+                    boxShadow: "0px 2px 12px 0px #68BA7F52",
                     width: "89px",
                     height: "42px",
                     padding: "10px 22px 10px 22px",
